@@ -1,0 +1,92 @@
+package event
+
+// **************************
+// * Channel Events Section *
+// **************************
+const CAMERA_CONNECT = "cameraConnected"
+const CAMERA_DISCONNECT = "cameraDisconnected"
+const LOW_FPS = "lowFps"
+const TAMPERING = "detectionTampering"
+const VIDEOLOSS = "videoLoss"
+const AUDIO_DETECTION = "detectionAudioCamera"
+const NETWORK_ALARM_INPUT = "alarmIn"
+const MOTION_DETECTION = "detectionMovement"
+const FACE_DETECTION = "faceDetected"
+const DEFOCUS_DETECTION = "defocusDetection"
+const FOG_DETECTION = "detectionFog"
+const SD_FAIL = "sdCardFail"
+const SD_FULL = "sdCardFull"
+const TRACKING = "tracking"
+const SHOCK_DETECTION = "detectionShock"
+
+// VideoAnalytics
+const PASSING = "passingDetection"
+const ENTERING = "enteringDetection"
+const EXITING = "exitingDetection"
+const APPEARING = "appearingDetection"
+const DISAPPEARING = "disappearingDetection"
+const LOITERING = "loiteringDetection"
+const INTRUSION = "intrusionVideoDetection"
+
+// AudioAnalytics
+const SCREAM = "detectionScreamCamera"
+const GUNSHOT = "detectionGunshotCamera"
+const EXPLOSION = "detectionExplosionCamera"
+const GLASS_BREAK = "detectionCrashingGlassCamera"
+
+// ObjectDetection
+const PERSON_DETECTION = "objectDetectionPerson"
+const VEHICLE_DETECTION = "objectDetectionPerson"
+const LICENSE_PLATE_DETECTION = "objectDetectionLicensePlate"
+
+// *************************
+// * System Events Section *
+// *************************
+
+// SystemEvent
+const POWER_ON = "powerOn"
+const POWER_REBOOT = "powerReboot"
+const CONFIG_CHANGE = "configurationChange"
+const FW_UPDATE = "firmwareUpdate"
+const FACTORY_RESET = "factoryReset"
+const TIME_CHANGE = "timeChange"
+const NETWORK_CHANGE = "networkChange"
+const ADMIN_LOGIN = "adminLogin"
+const NET_CAMERA_TRAFFIC_OVERFLOW = "netCamTrafficOverFlow"
+const END_OF_FRAME = "endofFrame"
+const HDD_FULL = "hddFull"
+const HDD_FAIL = "hddFail"
+const HDD_NONE = "hddNone"
+const InternalHDDErase = "internalHDDErase"
+const InternalHDDConnect = "internalHDDConnect"
+const BeingUpdate = "beginUpdate"
+const BatteryFail = "batteryFail"
+const USBHDDConnect = "USBHDDConnect"
+const DSP_DISPLAY_START = "DSPDisplayStart"
+const DSP_VA_SYSTEM_START = "DSPVASystemStart"
+const AMD_LOAD_FAIL = "AMDLoadFail"
+const ALARM_RESET = "alarmReset"
+const NEW_FW_AVAILABLE = "newFWAvailable"
+const PASSWORD_CHANGE = "passwordChange"
+const CONFIG_RESTORE = "configurationRestore"
+const RECORDING = "recording"
+const RECORD_FILTERING = "RecordFiltering"
+const RECORDING_ERROR = "RecordingError"
+const OVERWRITE_DECODING = "overwriteDecoding"
+const BACKUP = "backup"
+const RECORD_FRAME_DROP = "recordFrameDrop"
+const CONFIGURATION_BACKUP = "configurationBackup"
+const CONFIGURATION_RESTORE = "configurationRestore"
+const SD_FORMAT = "sdCardFormat"
+const SD_INSERT = "sdCardInsert"
+const SD_REMOVE = "sdCardRemove"
+const NAS_CONNECT = "nasConnect"
+const NAS_DISCONNECT = "nasDisconnect"
+const NAS_FAIL = "nasFail"
+const NAS_FULL = "nasFull"
+const NAS_FORMAT = "nasFormat"
+const LINE_CROSSING = "lineCrossing"
+const ALARM_INPUT_NC = "alarmInputNC"
+const ALARM_INPUT_NO = "alarmInputNO"
+const ALARM_OUTPUT_NC = "alarmOutputNC"
+const ALARM_OUTPUT_NO = "alarmOutputNO"
