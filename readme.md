@@ -30,9 +30,8 @@ func main() {
 
 	config.AddConfigHandler(
 		config.GET_CHANNELS,         // first param is key of config
-		handle,                      // handle is a func that get a config.HandlerValue and return T and error; T is a type of response type
-		struct{}{},                  // request type, when request type is struct{}{} it means that request type is empty
-		config.GetChannelResponse{}, // response type, when response type is config.GetChannelResponse{} it means that response type is config.GetChannelResponse
+		handle,                      // handle is a func that get a config.HandlerValue and return that would be return to the DriverHUB
+		
 	)
 }
 
