@@ -8,7 +8,7 @@ import (
 
 type HandlerValue struct {
 	DeviceData *ConfigMessageDeviceData
-	Value      any
+	Value      string
 }
 
 var handlersMap map[NetsocsConfigKey]handlerFunction
@@ -19,19 +19,15 @@ type tConfigHandler[RESPONSE_TEMPLATE any, VALUE_EXPECTED_TEMPLATE any] func(val
 
 type FuncConfigHandler func(valueMessage HandlerValue) (interface{}, error)
 
-func AddConfigHandler(configKey NetsocsConfigKey, configHandler FuncConfigHandler, requestType any, responseType any) error {
+func AddConfigHandler(configKey NetsocsConfigKey, configHandler FuncConfigHandler) error {
 	if handlersMap == nil {
 		handlersMap = make(map[NetsocsConfigKey]handlerFunction)
 	}
 	handlersMap[configKey] = func(valueMessage string, deviceData *ConfigMessageDeviceData) (string, error) {
-		value := requestType
-		err := json.Unmarshal([]byte(valueMessage), &value)
-		if err != nil {
-			return "", err
-		}
+
 		response, err := configHandler(HandlerValue{
 			DeviceData: deviceData,
-			Value:      value,
+			Value:      valueMessage,
 		})
 		if err != nil {
 			return "", err
