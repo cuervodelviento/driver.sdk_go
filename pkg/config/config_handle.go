@@ -24,7 +24,7 @@ func AddConfigHandler(configKey NetsocsConfigKey, configHandler FuncConfigHandle
 		handlersMap = make(map[NetsocsConfigKey]handlerFunction)
 	}
 	handlersMap[configKey] = func(valueMessage string, deviceData *ConfigMessageDeviceData) (string, error) {
-		value := responseType
+		value := requestType
 		err := json.Unmarshal([]byte(valueMessage), &value)
 		if err != nil {
 			return "", err
