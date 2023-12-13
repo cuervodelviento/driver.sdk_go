@@ -41,7 +41,13 @@ func (e *EventDispatcher) DispatchWithChannels(eventKey string, deviceID int, ch
 	bodyReader := bytes.NewReader(body)
 	_, err := http.Post(fmt.Sprintf("http://%s:%d/v1/topologia/misc/%s", e.host, e.port, eventKey), "application/json",
 		bodyReader)
-	// respString, _ := io.ReadAll(resp.Body)
-	// fmt.Println(string(respString))
+	return err
+}
+func (e *EventDispatcher) DispatchWithChannelsAndOriginalValue(eventKey string, deviceID int, channelNumber int, originalValue string) error {
+	bodyString := fmt.Sprintf(`{"deviceId": %d, "deviceByProps": [ "\"parentDevice\": %d", "\"channelNumber\": %d"], "originalValue": "%s"}`, deviceID, deviceID, channelNumber, originalValue)
+	body := []byte(bodyString)
+	bodyReader := bytes.NewReader(body)
+	_, err := http.Post(fmt.Sprintf("http://%s:%d/v1/topologia/misc/%s", e.host, e.port, eventKey), "application/json",
+		bodyReader)
 	return err
 }
