@@ -27,18 +27,21 @@ func (e *EventDispatcher) SetPort(port int) {
 }
 
 func (e *EventDispatcher) Dispatch(eventKey string, deviceID int) error {
-	return e.dispatch(eventKey, deviceID)
-}
-
-func (e *EventDispatcher) DispatchWithChannels(eventKey string, deviceID int, channelNumber int) error {
-	return nil
-}
-
-func (e *EventDispatcher) dispatch(eventKey string, deviceId int) error {
-	bodyString := fmt.Sprintf(`{"deviceId": %d}`, 1)
+	bodyString := fmt.Sprintf(`{"deviceId": %d, }`, deviceID)
 	body := []byte(bodyString)
 	bodyReader := bytes.NewReader(body)
 
-	_, err := http.Post(fmt.Sprintf("http://%s:%d/%s", e.host, e.port, eventKey), "application/json", bodyReader)
+	_, err := http.Post(fmt.Sprintf("http://%s:%d/v1/topologia/misc/%s", e.host, e.port, eventKey), "application/json", bodyReader)
+	return err
+}
+
+func (e *EventDispatcher) DispatchWithChannels(eventKey string, deviceID int, channelNumber int) error {
+	bodyString := fmt.Sprintf(`{"deviceId": %d, "deviceByProps": [ "\"parentDevice\": %d", "\"channelNumber\": %d"]}`, deviceID, deviceID, channelNumber)
+	body := []byte(bodyString)
+	bodyReader := bytes.NewReader(body)
+	_, err := http.Post(fmt.Sprintf("http://%s:%d/v1/topologia/misc/%s", e.host, e.port, eventKey), "application/json",
+		bodyReader)
+	// respString, _ := io.ReadAll(resp.Body)
+	// fmt.Println(string(respString))
 	return err
 }
