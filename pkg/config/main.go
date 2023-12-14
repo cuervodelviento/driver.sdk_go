@@ -53,6 +53,11 @@ type s_response struct {
 	Data      string `json:"data"`
 }
 
+type defaultDataResponse struct {
+	Error bool   `json:"error"`
+	Msg   string `json:"msg"`
+}
+
 func ListenConfig(host string) {
 
 	go func() {
@@ -63,12 +68,40 @@ func ListenConfig(host string) {
 				if handler != nil {
 					response, err := handler(message.Value, message.DeviceData)
 					if err == nil {
-						responses <- &s_response{
-							RequestId: message.RequestID,
-							Data:      response,
+						if response == "" {
+							tmp := &defaultDataResponse{
+								Error: false,
+								Msg:   "OK",
+							}
+							jsondata, err := json.Marshal(tmp)
+							if err != nil {
+								fmt.Println("Error in handler:", err)
+							} else {
+								responses <- &s_response{
+									RequestId: message.RequestID,
+									Data:      string(jsondata),
+								}
+							}
+						} else {
+							responses <- &s_response{
+								RequestId: message.RequestID,
+								Data:      response,
+							}
 						}
 					} else {
-						fmt.Println("Error in handler:", err)
+						tmp := &defaultDataResponse{
+							Error: true,
+							Msg:   err.Error(),
+						}
+						jsondata, err := json.Marshal(tmp)
+						if err != nil {
+							fmt.Println("Error in handler:", err)
+						} else {
+							responses <- &s_response{
+								RequestId: message.RequestID,
+								Data:      string(jsondata),
+							}
+						}
 					}
 				}
 			}
