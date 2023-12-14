@@ -68,7 +68,7 @@ func ListenConfig(host string) {
 				if handler != nil {
 					response, err := handler(message.Value, message.DeviceData)
 					if err == nil {
-						if response == "" {
+						if response == "" || response == "null" {
 							tmp := &defaultDataResponse{
 								Error: false,
 								Msg:   "OK",
