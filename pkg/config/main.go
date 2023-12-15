@@ -59,7 +59,7 @@ type defaultDataResponse struct {
 	Msg   string `json:"msg"`
 }
 
-func ListenConfig(host string) {
+func ListenConfig(host string, driverKey string) {
 
 	go func() {
 		for {
@@ -116,7 +116,7 @@ func ListenConfig(host string) {
 	log.Printf("connecting to %s", u.String())
 
 	c, _, err := websocket.DefaultDialer.Dial(u.String(), http.Header{
-		"Authorization": []string{"sasas"},
+		"Authorization": []string{driverKey},
 	})
 	if err != nil {
 		log.Fatal("dial:", err)
