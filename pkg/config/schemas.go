@@ -41,3 +41,27 @@ type GetUserResponse struct {
 	Enabled  bool   `json:"enabled"`
 	UserName string `json:"userName"`
 }
+
+// https://github.com/Netsocs-Team/DevDocs/blob/main/markdown/drivers/config-schemas/setAddPersonToAC.md
+type SetAddPersonToACRequest struct {
+	PersonID   int    `json:"personId"`
+	PersonName string `json:"personName"`
+}
+
+type SetAddPersonToACResponse error
+
+// https://github.com/Netsocs-Team/DevDocs/blob/main/markdown/drivers/config-schemas/setCardToPersonAC.md
+type SetCardToPersonACRequest struct {
+	PersonID int      `json:"personId"`
+	Cards    []string `json:"cards"`
+}
+
+type SetCardToPersonACResponse error
+
+// https://github.com/Netsocs-Team/DevDocs/blob/main/markdown/drivers/config-schemas/setFaceToPersonAC.md
+type SetFaceToPersonACRequest struct {
+	PersonID int      `json:"personId"`
+	Faces    []string `json:"faces"`
+}
+
+type SetFaceToPersonACResponse error
