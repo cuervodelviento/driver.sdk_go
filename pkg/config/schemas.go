@@ -44,7 +44,7 @@ type GetUserResponse struct {
 
 // https://github.com/Netsocs-Team/DevDocs/blob/main/markdown/drivers/config-schemas/setAddPersonToAC.md
 type SetAddPersonToACRequest struct {
-	PersonID   string    `json:"personId"`
+	PersonID   string `json:"personId"`
 	PersonName string `json:"personName"`
 }
 
@@ -52,7 +52,7 @@ type SetAddPersonToACResponse error
 
 // https://github.com/Netsocs-Team/DevDocs/blob/main/markdown/drivers/config-schemas/setCardToPersonAC.md
 type SetCardToPersonACRequest struct {
-	PersonID string      `json:"personId"`
+	PersonID string   `json:"personId"`
 	Cards    []string `json:"cards"`
 }
 
@@ -60,7 +60,7 @@ type SetCardToPersonACResponse error
 
 // https://github.com/Netsocs-Team/DevDocs/blob/main/markdown/drivers/config-schemas/setFaceToPersonAC.md
 type SetFaceToPersonACRequest struct {
-	PersonID string      `json:"personId"`
+	PersonID string   `json:"personId"`
 	Faces    []string `json:"faces"`
 }
 

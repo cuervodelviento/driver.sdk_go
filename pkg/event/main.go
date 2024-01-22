@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"fmt"
 	"net/http"
+	"strconv"
 )
 
 type EventDispatcher struct {
@@ -50,4 +51,54 @@ func (e *EventDispatcher) DispatchWithChannelsAndOriginalValue(eventKey string, 
 	_, err := http.Post(fmt.Sprintf("http://%s:%d/v1/topologia/misc/%s", e.host, e.port, eventKey), "application/json",
 		bodyReader)
 	return err
+}
+
+func (e *EventDispatcher) DispatchWithPersonIDAndOriginalValue(eventKey string, deviceID int, personId string, originalValue string) error {
+	userType, userId, err := getUserTypeAndUserIdFromPersonID(personId)
+	if err != nil {
+		return err
+	}
+	bodyString := fmt.Sprintf(`{"deviceId": %d, "originalValue": "%s", "userType": %d, "userId": %d}`, deviceID, originalValue, userType, userId)
+	body := []byte(bodyString)
+	bodyReader := bytes.NewReader(body)
+	_, err = http.Post(fmt.Sprintf("http://%s:%d/v1/topologia/misc/%s", e.host, e.port, eventKey), "application/json",
+		bodyReader)
+	return err
+}
+
+func (e *EventDispatcher) DispatchWithPersonID(eventKey string, deviceID int, personId string) error {
+	userType, userId, err := getUserTypeAndUserIdFromPersonID(personId)
+	if err != nil {
+		return err
+	}
+	bodyString := fmt.Sprintf(`{"deviceId": %d, "userType": %d, "userId": %d}`, deviceID, userType, userId)
+	body := []byte(bodyString)
+	bodyReader := bytes.NewReader(body)
+	_, err = http.Post(fmt.Sprintf("http://%s:%d/v1/topologia/misc/%s", e.host, e.port, eventKey), "application/json",
+		bodyReader)
+	return err
+}
+
+func getUserTypeAndUserIdFromPersonID(personId string) (userType int, userId int, err error) {
+	if len(personId) < 3 {
+		err = fmt.Errorf("invalid personId: %s", personId)
+		return
+	}
+
+	userTypeString := personId[:2]
+	userIdString := personId[2:]
+	switch userTypeString {
+	case "nu": // nu = Netsocs User
+		userType = 1
+	case "em": // em = Employee
+		userType = 2
+	case "vi": // vi = Visitor
+		userType = 3
+	default:
+		err = fmt.Errorf("invalid personId: %s", personId)
+		return
+	}
+	userId, err = strconv.Atoi(userIdString)
+	return
+
 }
