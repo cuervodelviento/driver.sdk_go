@@ -65,3 +65,21 @@ type SetFaceToPersonACRequest struct {
 }
 
 type SetFaceToPersonACResponse error
+
+// https://github.com/Netsocs-Team/DevDocs/blob/main/markdown/drivers/config-schemas/setDelPersonToAC.md
+
+type SetDelToPersonToACRequest struct {
+	PersonID string `json:"personId"`
+}
+
+type SetDelToPersonToACResponse error
+
+// https://github.com/Netsocs-Team/DevDocs/blob/main/markdown/drivers/config-schemas/getAdminUser.md
+
+type GetAdminUserRequest struct{}
+
+type GetAdminUserResponse []*GetAdminUserResponseItem
+
+type GetAdminUserResponseItem struct {
+	Username string `json:"username"`
+}
