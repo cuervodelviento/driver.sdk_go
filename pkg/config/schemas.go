@@ -85,8 +85,9 @@ type GetAdminUserResponseItem struct {
 }
 
 type GetRecordingSourceRequest struct {
-	UTCStart string  `json:"utcStart"`
-	UTCEnd   *string `json:"utcEnd"`
+	ChannelNumber int     `json:"channelNumber"`
+	UTCStart      string  `json:"utcStart"`
+	UTCEnd        *string `json:"utcEnd"`
 }
 
 type GetRecordingSourceResponse struct {
