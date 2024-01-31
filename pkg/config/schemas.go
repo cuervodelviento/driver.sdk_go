@@ -83,3 +83,42 @@ type GetAdminUserResponse []*GetAdminUserResponseItem
 type GetAdminUserResponseItem struct {
 	Username string `json:"username"`
 }
+
+type GetRecordingSourceRequest struct {
+	UTCStart string  `json:"utcStart"`
+	UTCEnd   *string `json:"utcEnd"`
+}
+
+type GetRecordingSourceResponse struct {
+	Source string `json:"source"`
+}
+
+type ZoomDirection int
+
+const (
+	ZoomIn  ZoomDirection = 0
+	ZoomOut ZoomDirection = 1
+)
+
+type ActionZoomRequest struct {
+	ChannelNumber int           `json:"channelNumber"`
+	ZoomDirection ZoomDirection `json:"zoomDirection"` // 0: zoom in, 1: zoom out
+}
+
+type ActionZoomResponse error
+
+type ActionMoveRequestDirection int
+
+const (
+	MoveUp    ActionMoveRequestDirection = 0
+	MoveDown  ActionMoveRequestDirection = 1
+	MoveLeft  ActionMoveRequestDirection = 2
+	MoveRight ActionMoveRequestDirection = 3
+)
+
+type ActionMoveRequest struct {
+	ChannelNumber int                        `json:"channelNumber"`
+	Direction     ActionMoveRequestDirection `json:"direction"`
+}
+
+type ActionMoveResponse error
