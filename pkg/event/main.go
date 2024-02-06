@@ -28,7 +28,7 @@ func (e *EventDispatcher) SetPort(port int) {
 }
 
 func (e *EventDispatcher) Dispatch(eventKey string, deviceID int) error {
-	bodyString := fmt.Sprintf(`{"deviceId": %d, }`, deviceID)
+	bodyString := fmt.Sprintf(`{"deviceId": %d }`, deviceID)
 	body := []byte(bodyString)
 	bodyReader := bytes.NewReader(body)
 
