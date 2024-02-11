@@ -96,13 +96,15 @@ En el ejemplo de arriba muestra lo que seria la base recomenda para el uso del N
 
 ## Configuraciones
 
+Los marcados con * son obligatorios.
+
 | ConfigKey | Request struct | Response struct | Description |
 | --- | --- | --- | --- |
-| ACTION_LISTEN_EVENTS | ListenEventsRequest | ListenEventsResponse | Listen the events of the device |
+| ACTION_LISTEN_EVENTS (*) | ListenEventsRequest | ListenEventsResponse | Listen the events of the device |
 | ACTION_OUTPUT_PULSE | OutputPulseRequest | OutputPulseResponse | Send a pulse to the device |
-| ACTION_PING_DEVICE | PingDeviceRequest | PingDeviceResponse | Ping the device |
+| ACTION_PING_DEVICE (*) | PingDeviceRequest | PingDeviceResponse | Ping the device |
 | ACTION_RESTART_DEVICE | RestartDeviceRequest | RestartDeviceResponse | Restart the device |
-| ACTION_STOP_LISTEN_EVENT | StopListenEventRequest | StopListenEventResponse | Stop listening the events of the device |
+| ACTION_STOP_LISTEN_EVENT (*) | StopListenEventRequest | StopListenEventResponse | Stop listening the events of the device |
 | ACTION_ZOOM | ZoomRequest | ZoomResponse | Zoom the device |
 | DELETE_USER | DeleteUserRequest | DeleteUserResponse | Delete a user from the device |
 | GET_ADMIN_USER | GetAdminUserRequest | GetAdminUserResponse | Get the admin user of the device |
