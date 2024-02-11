@@ -38,7 +38,7 @@ var configs = []Config{
 			request := config.SetAddPersonToACRequest{}
 			json.Unmarshal([]byte(valueMessage.Value), &request)
 			conn, _ := buildConnection(valueMessage)
-			conn.AddPersonToAC(request)
+			return nil, conn.AddPersonToAC(request)
 		},
 	},
 	{
@@ -47,7 +47,7 @@ var configs = []Config{
 			request := config.SetDelToPersonToACRequest{}
 			json.Unmarshal([]byte(valueMessage.Value), &request)
 			conn, _ := buildConnection(valueMessage)
-			conn.DelPersonToAC(request)
+			return nil, conn.DelPersonToAC(request)
 		},
 	},
 	{
@@ -56,7 +56,8 @@ var configs = []Config{
 			request := config.SetCardToPersonACRequest{}
 			json.Unmarshal([]byte(valueMessage.Value), &request)
 			conn, _ := buildConnection(valueMessage)
-			conn.SetCardToPersonAC(request)
+			return nil, conn.SetCardToPersonAC(request)
+		
 		},
 	},
 	{
@@ -95,6 +96,10 @@ func main() {
 En el ejemplo de arriba muestra lo que seria la base recomenda para el uso del Netsocs Driver SDK en Go. Se recomienda crear una estructura que contenga la Key de la configuracion que se quiere manejar y un manejador que se encargue de las acciones en el dispositivo correspodiente. 
 
 ## Configuraciones
+
+Todas las 'Keys' de configuraciones estan relacionadas a un mensaje de tipo 'Request' y 'Response' que se envia al dispositivo. Estos mensajes estan definidos en el SDK y son accesibles desde el paquete `github.com/Netsocs-Team/driver.sdk_go/pkg/config`.
+
+### Configuraciones soportadas
 
 Los marcados con * son obligatorios.
 
