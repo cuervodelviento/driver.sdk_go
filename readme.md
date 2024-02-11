@@ -10,6 +10,7 @@ go get github.com/Netsocs-Team/driver.sdk_go
 
 ## Usage
 
+<img src="/doc/driverhub-ws-driver.png" />
 
 ```go
 import "github.com/Netsocs-Team/driver.sdk_go/pkg/config"
@@ -88,7 +89,7 @@ func main() {
 		config.AddConfigHandler(_config.ConfigKey, _config.HandleFunction)
 	}
 	config.ListenConfig("netsocs.local:3196", "...")
-
 }
-
 ```
+
+En el ejemplo de arriba muestra lo que seria la base recomenda para el uso del Netsocs Driver SDK en Go. Se recomienda crear una estructura que contenga la Key de la configuracion que se quiere manejar y un manejador que se encargue de las acciones en el dispositivo correspodiente. 
