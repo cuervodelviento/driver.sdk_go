@@ -5,34 +5,90 @@ This is the official SDK for Netsocs Drivers
 ## Installation
 
 ```bash
-go get github.com/Netsocs-Team/driver.sdk_go.git
+go get github.com/Netsocs-Team/driver.sdk_go
 ```
 
 ## Usage
 
 
 ```go
-package main
-
 import "github.com/Netsocs-Team/driver.sdk_go/pkg/config"
 
-func main() {
-    handle := func(valueMessage config.HandlerValue) (interface{}, error) {
-		// build connection for driver from device data
-		connection := buildConnectionFromDeviceData(valueMessage.DeviceData)
-        // this is logic of the driver
-		channels := sunapi.Channels{
-			Connection: connection,
-		}
-		// must return type of response type and error
-		return channels.GetChannels() // return config.GetChannelResponse and error
-	}
+type Config struct {
+	// ConfigKey represents the key for the Netsocs configuration.
+	ConfigKey      config.NetsocsConfigKey
+	// HandleFunction is the function that handles the value message and returns a result.
+	HandleFunction func(valueMessage config.HandlerValue) (interface{}, error)
+}
 
-	config.AddConfigHandler(
-		config.GET_CHANNELS,         // first param is key of config
-		handle,                      // handle is a func that get a config.HandlerValue and return that would be return to the DriverHUB
-		
-	)
+// eventsHandlers is a map that stores event handlers associated with their respective IDs. This have cancel functions to stop the event listener.
+var eventsHandlers = map[int]context.CancelFunc{}
+
+var configs = []Config{
+	{
+		ConfigKey: config.ACTION_PING_DEVICE,
+		HandleFunction: func(valueMessage config.HandlerValue) (interface{}, error) {
+			return nil, conn.Ping()
+		},
+	},
+	{
+		ConfigKey: config.SET_ADD_PERSON_TO_AC,
+		HandleFunction: func(valueMessage config.HandlerValue) (interface{}, error) {
+			request := config.SetAddPersonToACRequest{}
+			json.Unmarshal([]byte(valueMessage.Value), &request)
+			conn, _ := buildConnection(valueMessage)
+			conn.AddPersonToAC(request)
+		},
+	},
+	{
+		ConfigKey: config.SET_DEL_PERSON_TO_AC,
+		HandleFunction: func(valueMessage config.HandlerValue) (interface{}, error) {
+			request := config.SetDelToPersonToACRequest{}
+			json.Unmarshal([]byte(valueMessage.Value), &request)
+			conn, _ := buildConnection(valueMessage)
+			conn.DelPersonToAC(request)
+		},
+	},
+	{
+		ConfigKey: config.SET_CARD_TO_PERSON_AC,
+		HandleFunction: func(valueMessage config.HandlerValue) (interface{}, error) {
+			request := config.SetCardToPersonACRequest{}
+			json.Unmarshal([]byte(valueMessage.Value), &request)
+			conn, _ := buildConnection(valueMessage)
+			conn.SetCardToPersonAC(request)
+		},
+	},
+	{
+		ConfigKey: config.ACTION_LISTEN_EVENTS,
+		HandleFunction: func(valueMessage config.HandlerValue) (interface{}, error) {
+			conn, err := buildConnection(valueMessage)
+			ctx, cancel := context.WithCancel(context.Background())
+			go conn.ListenEvents(ctx, valueMessage.DeviceData.ID)
+			eventsHandlers[valueMessage.DeviceData.ID] = cancel
+			return nil, err
+		},
+	},
+	{
+		ConfigKey: config.ACTION_STOP_LISTEN_EVENT,
+		HandleFunction: func(valueMessage config.HandlerValue) (interface{}, error) {
+			cancel, ok := eventsHandlers[valueMessage.DeviceData.ID]
+			if ok {
+				cancel()
+				delete(eventsHandlers, valueMessage.DeviceData.ID)
+			} else {
+				return nil, fmt.Errorf("No event listener found for device %d", valueMessage.DeviceData.ID)
+			}
+			return nil, nil
+		},
+	},
+}
+
+func main() {
+   for _, _config := range configs {
+		config.AddConfigHandler(_config.ConfigKey, _config.HandleFunction)
+	}
+	config.ListenConfig("netsocs.local:3196", "...")
+
 }
 
 ```
