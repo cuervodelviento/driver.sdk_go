@@ -93,3 +93,27 @@ func main() {
 ```
 
 En el ejemplo de arriba muestra lo que seria la base recomenda para el uso del Netsocs Driver SDK en Go. Se recomienda crear una estructura que contenga la Key de la configuracion que se quiere manejar y un manejador que se encargue de las acciones en el dispositivo correspodiente. 
+
+## Configuraciones
+
+| ConfigKey | Request struct | Response struct | Description |
+| --- | --- | --- | --- |
+| ACTION_LISTEN_EVENTS | ListenEventsRequest | ListenEventsResponse | Listen the events of the device |
+| ACTION_OUTPUT_PULSE | OutputPulseRequest | OutputPulseResponse | Send a pulse to the device |
+| ACTION_PING_DEVICE | PingDeviceRequest | PingDeviceResponse | Ping the device |
+| ACTION_RESTART_DEVICE | RestartDeviceRequest | RestartDeviceResponse | Restart the device |
+| ACTION_STOP_LISTEN_EVENT | StopListenEventRequest | StopListenEventResponse | Stop listening the events of the device |
+| ACTION_ZOOM | ZoomRequest | ZoomResponse | Zoom the device |
+| DELETE_USER | DeleteUserRequest | DeleteUserResponse | Delete a user from the device |
+| GET_ADMIN_USER | GetAdminUserRequest | GetAdminUserResponse | Get the admin user of the device |
+| GET_CHANNELS | GetChannelsRequest | GetChannelsResponse | Get the channels of the device |
+| GET_RECORDING_SOURCE | GetRecordingSourceRequest | GetRecordingSourceResponse | Get the recording source of the device |
+| GET_USERS | GetUsersRequest | GetUsersResponse | Get the users of the device |
+| SET_ADD_PERSON_TO_AC | SetAddPersonToACRequest | SetAddPersonToACResponse | Add a person to the access control |
+| SET_CARD_TO_PERSON_AC | SetCardToPersonACRequest | SetCardToPersonACResponse | Set a card to a person in the access control |
+| SET_DEL_PERSON_TO_AC | SetDelPersonToACRequest | SetDelPersonToACResponse | Delete a person from the access control |
+| SET_DELETE_STORAGE | DeleteStorageRequest | DeleteStorageResponse | Delete the storage of the device |
+| SET_DELETE_USER | DeleteUserRequest | DeleteUserResponse | Delete a user from the device |
+| SET_FACE_TO_PERSON_AC | SetFaceToPersonACRequest | SetFaceToPersonACResponse | Set a face to a person in the access control |
+| SET_USERS | SetUsersRequest | SetUsersResponse | Set the users of the device |
+
