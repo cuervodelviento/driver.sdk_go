@@ -12,6 +12,10 @@ go get github.com/Netsocs-Team/driver.sdk_go
 
 <img src="/doc/driverhub-ws-driver.png" />
 
+El SDK de Driver de Netsocs establecerá comunicación con el servicio de drivers de Netsocs llamado DriverHub. 
+
+Para que la conexión entre el driver y netsocs sea exitosa, el sdk provee el metodo `ListenConfig` el cual necesita dos parametros, el primero es la direccion del driver hub y el segundo es un texto llamado DriverKey el cual le permite el DriverHub conocer los detalles del driver que intenta establecer conexion, el DriverKey debe ser unico por driver y es clave en la comunicacion entre ambas partes, un DriverKey no emitido por Netsocs y completado la cuidadosa metodologia de testing podria no funcionar en una instancia de netsocs en produccion ya que el DriverKey contiene unos metadatos que contienen la informacion de las pruebas realizadas con el driver y si estas pruebas fueron exitosas, de alli se toma la decision de funcionar en una instancia de produccion. Una vez llamado el metodo `ListenConfig` el SDK intentara establecer conexion con el DriverHub y de ser exitosa se quedara escuchando a la espera de alguna configuracion que se haya habilitado en el driver. Para habilitar configuraciones en un driver se usa el metodo `AddConfigHandler` el cual necesita dos parametros, el primero es la `key` de la configuracion, el segundo es la funciona que se encarga de la ejecucion de esta configuración.
+
 ```go
 import "github.com/Netsocs-Team/driver.sdk_go/pkg/config"
 
