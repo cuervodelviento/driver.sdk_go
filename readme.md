@@ -127,4 +127,4 @@ Los marcados con * son obligatorios.
 | SET_DELETE_USER | DeleteUserRequest | DeleteUserResponse | Delete a user from the device | MISSING |
 | SET_FACE_TO_PERSON_AC | SetFaceToPersonACRequest | SetFaceToPersonACResponse | Set a face to a person in the access control | [Open](./doc/config-schemas/setFaceToPersonAC.md) |
 | SET_USERS | SetUsersRequest | SetUsersResponse | Set the users of the device | [Open](./doc/config-schemas/setUsers.md) |
-
+| EXAMPLE_CONFIG | ExampleConfigRequest | ExampleConfigResponse | Example config | [Open](./doc/config-schemas/exampleConfig.md) |

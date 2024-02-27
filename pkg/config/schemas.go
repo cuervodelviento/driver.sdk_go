@@ -123,3 +123,9 @@ type ActionMoveRequest struct {
 }
 
 type ActionMoveResponse error
+
+type ExampleConfigRequest struct {
+	MacAddress string `json:"macAddress"`
+}
+
+type ExampleConfigResponse error
