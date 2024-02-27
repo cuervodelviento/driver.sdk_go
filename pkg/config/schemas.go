@@ -123,3 +123,11 @@ type ActionMoveRequest struct {
 }
 
 type ActionMoveResponse error
+
+type GetCameraResponseItem struct {
+	Name          string `json:"name"`
+	ChannelNumber int    `json:"channelNumber"`
+	ID            string `json:"id"`
+}
+
+type GetCameraResponse []*GetCameraResponseItem
