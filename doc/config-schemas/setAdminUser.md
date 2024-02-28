@@ -1,12 +1,8 @@
 # Set admin user config
 
-## Acciones
-
-- Editar
-
 ## Descripcion
 
-modificar credenciales del usuario admin 
+Modificar credenciales del usuario admin 
 
 ## Request Message
 
@@ -16,11 +12,11 @@ modificar credenciales del usuario admin
     "data": {
         "deviceData": {...},
         "configKey": "setAdminUser",
-        "value": "{
+        "value": {
             "username": "username",
             "prevPassword": "***",
-            "newPassword": "***",
-        }"  
+            "newPassword": "***"
+        } 
     }
 }
 ```

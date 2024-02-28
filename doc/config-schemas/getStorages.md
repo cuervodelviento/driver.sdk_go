@@ -2,7 +2,7 @@
 
 ## Descripcion
 
-Lista de dispositivos de almacenamiento disponibles (Video)
+Obtener todas las unidades de almacenamiento disponibles en el dispositivo
 
 ## Request Message
 
@@ -27,9 +27,9 @@ Lista de dispositivos de almacenamiento disponibles (Video)
     "id": 0,
     "deviceName":"DeviceTest",
     "recording": true,
-    "freeSize":"30mb",
-    "totalSize":"20mb",
-    "status":""
+    "freeSize":5000, 
+    "totalSize": 4000,
+    "status":0
     }]
 }
 ```
@@ -39,6 +39,7 @@ Lista de dispositivos de almacenamiento disponibles (Video)
 | id | int | index del item  |
 | deviceName | string | nombre del store  |
 | recording | boolean | está o no grabando |
-| freeSize | string | Almacenamiento libre |
-| totalSize | string | Almacenamiento total |
-| status | string | Estado actual del dispositivo dependiendo del driver, ("online","offline","disconnected",etc) |
+| freeSize | string | Almacenamiento libre en MB |
+| totalSize | string | Almacenamiento total en MB |
+| status | string | Estado del almacenamiento, 0: OK, 1: Error, 2: Warning, 3: Unknown |
+

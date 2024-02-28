@@ -112,21 +112,35 @@ Los marcados con * son obligatorios.
 | ACTION_LISTEN_EVENTS (*) | ListenEventsRequest | ListenEventsResponse | Listen the events of the device | [Open](./doc/config-schemas/actionListenEvent.md) |
 | ACTION_OUTPUT_PULSE | OutputPulseRequest | OutputPulseResponse | Send a pulse to the device | [Open](./doc/config-schemas/actionOutputPulse.md) |
 | ACTION_PING_DEVICE (*) | PingDeviceRequest | PingDeviceResponse | Ping the device | [Open](./doc/config-schemas/actionPingDevice.md) |
+| ACTION_PLAY_AUDIO_CLIP | PlayAudioClipRequest | PlayAudioClipResponse | Play an audio clip in the device | [Open](./doc/config-schemas/actionPlayAudioClip.md) |
 | ACTION_RESTART_DEVICE | RestartDeviceRequest | RestartDeviceResponse | Restart the device | [Open](./doc/config-schemas/actionRestart.md) |
 | ACTION_STOP_LISTEN_EVENT (*) | StopListenEventRequest | StopListenEventResponse | Stop listening the events of the device | [Open](./doc/config-schemas/actionStopListenEvent.md) |
 | ACTION_ZOOM | ZoomRequest | ZoomResponse | Zoom the device | MISSING |
 | DELETE_USER | DeleteUserRequest | DeleteUserResponse | Delete a user from the device | [Open](./doc/config-schemas/deleteUser.md) |
 | GET_ADMIN_USER | GetAdminUserRequest | GetAdminUserResponse | Get the admin user of the device | [Open](./doc/config-schemas/getAdminUser.md) |
+| GET_ADMIN_USERS | GetAdminUsersRequest | GetAdminUsersResponse | Get the admin users of the device | [Open](./doc/config-schemas/getAdminUsers.md) |
+| GET_AVAILABLE_OUTPUTS (*) | GetAvailableOutputsRequest | GetAvailableOutputsResponse | Get the available outputs of the device | [Open](./doc/config-schemas/getAvailableOutputs.md) |
+| GET_AVAILABLE_SPEAKERS (*) | GetAvailableSpeakersRequest | GetAvailableSpeakersResponse | Get the available speakers of the device | [Open](./doc/config-schemas/getAvailableSpeakers.md) |
+| GET_AVAILABLE_VIDEO_RESOLUTIONS (*) | GetAvailableVideoResolutionsRequest | GetAvailableVideoResolutionsResponse | Get the available video resolutions of the device | [Open](./doc/config-schemas/getAvailableVideoResolutions.md) |
 | GET_CHANNELS | GetChannelsRequest | GetChannelsResponse | Get the channels of the device | [Open](./doc/config-schemas/getChannels.md) |
+| GET_FLIP_VIDEO_STATUS | GetFlipVideoStatusRequest | GetFlipVideoStatusResponse | Get the flip video status of the device | [Open](./doc/config-schemas/getFlipVideoStatusResponse.md) |
+| GET_HEATMAP_IMAGE | GetHeatmapImageRequest | GetHeatmapImageResponse | Get the heatmap image of the device | [Open](./doc/config-schemas/getHeatmapImage.md) |
+| GET_MIRROR_VIDEO_STATUS | GetMirrorVideoStatusRequest | GetMirrorVideoStatusResponse | Get the mirror video status of the device | [Open](./doc/config-schemas/getMirrorVideoStatusResponse.md) |
 | GET_RECORDING_SOURCE | GetRecordingSourceRequest | GetRecordingSourceResponse | Get the recording source of the device | MISSING |
+| GET_STORAGES | GetStoragesRequest | GetStoragesResponse | Get the storages of the device | [Open](./doc/config-schemas/getStorages.md) |
 | GET_USERS | GetUsersRequest | GetUsersResponse | Get the users of the device | [Open](./doc/config-schemas/getUsers.md) |
+| GET_VIDEO_IN_BLACK_AND_WHITE_STATUS | GetVideoInBlackAndWhiteStatusRequest | GetVideoInBlackAndWhiteStatusResponse | Get the video in black and white status of the device | [Open](./doc/config-schemas/getVideoInBlackAndWhiteStatus.md) |
 | SET_ADD_PERSON_TO_AC | SetAddPersonToACRequest | SetAddPersonToACResponse | Add a person to the access control | [Open](./doc/config-schemas/setAddPersonToAC.md) |
+| SET_ADMIN_USER | SetAdminUserRequest | SetAdminUserResponse | Set the admin user of the device | [Open](./doc/config-schemas/setAdminUser.md) |
 | SET_CARD_TO_PERSON_AC | SetCardToPersonACRequest | SetCardToPersonACResponse | Set a card to a person in the access control | [Open](./doc/config-schemas/setCardToPersonAC.md) |
 | SET_DEL_PERSON_TO_AC | SetDelPersonToACRequest | SetDelPersonToACResponse | Delete a person from the access control | [Open](./doc/config-schemas/setDelPersonToAC.md) |
 | SET_DELETE_STORAGE | DeleteStorageRequest | DeleteStorageResponse | Delete the storage of the device | [Open](./doc/config-schemas/setDeleteStorage.md) |
 | SET_DELETE_USER | DeleteUserRequest | DeleteUserResponse | Delete a user from the device | MISSING |
 | SET_FACE_TO_PERSON_AC | SetFaceToPersonACRequest | SetFaceToPersonACResponse | Set a face to a person in the access control | [Open](./doc/config-schemas/setFaceToPersonAC.md) |
+| SET_FLIP_VIDEO | SetFlipVideoRequest | SetFlipVideoResponse | Set the flip video of the device | [Open](./doc/config-schemas/setFlipVideo.md) |
+| SET_MIRROR_VIDEO | SetMirrorVideoRequest | SetMirrorVideoResponse | Set the mirror video of the device | [Open](./doc/config-schemas/setMirrorVideo.md) |
 | SET_USERS | SetUsersRequest | SetUsersResponse | Set the users of the device | [Open](./doc/config-schemas/setUsers.md) |
+| SET_VIDEO_IN_BLACK_AND_WHITE | SetVideoInBlackAndWhiteRequest | SetVideoInBlackAndWhiteResponse | Set the video in black and white of the device | [Open](./doc/config-schemas/setVideoInBlackAndWhite.md) |
+| SET_VIDEO_RESOLUTION | SetVideoResolutionRequest | SetVideoResolutionResponse | Set the video resolution of the device | [Open](./doc/config-schemas/setVideoResolution.md) |
+| SET_BLOCK_PERSON_TO_AC | SetBlockPersonToACRequest | SetBlockPersonToACResponse | Block a person in the access control | [Open](./doc/config-schemas/setBlockPersonToAC.md) |
 | GET_CAMERAS | GetCamerasRequest | GetCamerasResponse | Get the cameras of the device | [Open](./doc/config-schemas/getCameras.md) |
-
-
