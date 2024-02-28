@@ -258,3 +258,9 @@ type GetHeatmapImageRequest struct {
 type GetHeatmapImageResponse struct {
 	Filename string `json:"filename"`
 }
+
+type SetBlockPersonToACRequest struct {
+	PersonID string `json:"personId"`
+}
+
+type SetBlockPersonToACResponse error
