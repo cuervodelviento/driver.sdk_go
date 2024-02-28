@@ -128,9 +128,8 @@ type GetAvailableOutputsRequest struct{}
 
 type GetAvailableOutputsResponse []*GetAvailableOutputsResponseItem
 type GetAvailableOutputsResponseItem struct {
-	ID          int    `json:"id"`
-	Name        string `json:"name"`
-	Description string `json:"description"`
+	ID   string `json:"id"`
+	Name string `json:"name"`
 	// 0 = relay, 1 = led
 	Type int `json:"type"`
 	// 0 = normalmente abierto, 1 = normalmente cerrado, 2 = encendido, 3 = apagado
@@ -140,7 +139,7 @@ type GetAvailableOutputsResponseItem struct {
 type GetAvailableSpeakersRequest struct{}
 type GetAvailableSpeakersResponse []*GetAvailableSpeakersResponseItem
 type GetAvailableSpeakersResponseItem struct {
-	ID       int    `json:"id"`
+	ID       string `json:"id"`
 	Level    int    `json:"level"`
 	MinLevel int    `json:"minLevel"`
 	MaxLevel int    `json:"maxLevel"`

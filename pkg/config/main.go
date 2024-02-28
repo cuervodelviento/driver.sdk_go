@@ -104,6 +104,20 @@ func ListenConfig(host string, driverKey string) {
 							}
 						}
 					}
+				} else {
+					tmp := &defaultDataResponse{
+						Error: true,
+						Msg:   fmt.Sprintf("'%s' not found on the driver", message.ConfigKey),
+					}
+					jsondata, err := json.Marshal(tmp)
+					if err != nil {
+						fmt.Println("Error in handler:", err)
+					} else {
+						responses <- &s_response{
+							RequestId: message.RequestID,
+							Data:      string(jsondata),
+						}
+					}
 				}
 			}
 		}

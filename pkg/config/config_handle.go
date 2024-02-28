@@ -15,7 +15,7 @@ var handlersMap map[NetsocsConfigKey]handlerFunction
 
 type handlerFunction func(valueMessage string, deviceData *ConfigMessageDeviceData) (string, error)
 
-type tConfigHandler[RESPONSE_TEMPLATE any, VALUE_EXPECTED_TEMPLATE any] func(valueMessage HandlerValue) (RESPONSE_TEMPLATE, error)
+// type tConfigHandler[RESPONSE_TEMPLATE any, VALUE_EXPECTED_TEMPLATE any] func(valueMessage HandlerValue) (RESPONSE_TEMPLATE, error)
 
 type FuncConfigHandler func(valueMessage HandlerValue) (interface{}, error)
 

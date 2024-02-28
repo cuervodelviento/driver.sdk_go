@@ -24,7 +24,7 @@ Obtener todos los altavoces disponibles en el dispositivo
 {
     ...,
     "data": [{
-    "id": 1,
+    "id": "1",
     "level": 0,
     "minLevel": 0,
     "maxLevel": 100,
@@ -38,7 +38,7 @@ Obtener todos los altavoces disponibles en el dispositivo
 
 | Campo | Tipo | Descripcion |
 | --- | --- | --- |
-| id | int | id de la salida |
+| id | string | id de la salida |
 | level | int | nivel del altavoz |
 | minLevel | int | nivel minimo del altavoz |
 | maxLevel | int | nivel maximo del altavoz |
