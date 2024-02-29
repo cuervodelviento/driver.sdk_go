@@ -35,5 +35,5 @@ El Request Message de `getMicrophones` no necesita value. El driver solo con el 
 | Campo         | Tipo   | Descripcion                  |
 | ------------- | ------ | ---------------------------- |
 | name          | string | El nombre del micrófono      |
-| channelNumber | number | El canal micrófono           |
+| channelNumber | number | El canal del micrófono       |
 | id            | string | Id interno del micrófono     |
