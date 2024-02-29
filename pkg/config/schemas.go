@@ -264,3 +264,11 @@ type SetBlockPersonToACRequest struct {
 }
 
 type SetBlockPersonToACResponse error
+
+type GetMicrophoneResponseItem struct {
+	Name          string `json:"name"`
+	ChannelNumber int    `json:"channelNumber"`
+	ID            string `json:"id"`
+}
+
+type GetMicrophoneResponse []*GetMicrophoneResponseItem
