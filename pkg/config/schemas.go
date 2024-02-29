@@ -264,3 +264,12 @@ type SetBlockPersonToACRequest struct {
 }
 
 type SetBlockPersonToACResponse error
+
+type GetInputsResponseItem struct {
+	ID          string `json:"id"`
+	Name        string `json:"name"`
+	Description string `json:"description"`
+}
+
+// https://github.com/Netsocs-Team/DevDocs/blob/main/markdown/drivers/config-schemas/getChannels.md
+type GetInputsResponse []*GetInputsResponseItem
