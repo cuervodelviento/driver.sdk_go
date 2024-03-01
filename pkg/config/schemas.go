@@ -265,10 +265,21 @@ type SetBlockPersonToACRequest struct {
 
 type SetBlockPersonToACResponse error
 
+type GetInputsResponseItem struct {
+	ID          string `json:"id"`
+	Name        string `json:"name"`
+	Description string `json:"description"`
+	Enabled     bool   `json:"enabled"`
+	Type        int    `json:"type"`
+}
+
+// https://github.com/Netsocs-Team/DevDocs/blob/main/markdown/drivers/config-schemas/getChannels.md
+type GetInputsResponse []*GetInputsResponseItem
+
 type GetMicrophoneResponseItem struct {
-	Name          string `json:"name"`
-	ChannelNumber int    `json:"channelNumber"`
-	ID            string `json:"id"`
+	Name    string `json:"name"`
+	Enabled bool   `json:"enabled"`
+	ID      string `json:"id"`
 }
 
 type GetMicrophoneResponse []*GetMicrophoneResponseItem

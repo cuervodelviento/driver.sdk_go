@@ -143,4 +143,6 @@ Los marcados con * son obligatorios.
 | SET_VIDEO_IN_BLACK_AND_WHITE | SetVideoInBlackAndWhiteRequest | SetVideoInBlackAndWhiteResponse | Set the video in black and white of the device | [Open](./doc/config-schemas/setVideoInBlackAndWhite.md) |
 | SET_VIDEO_RESOLUTION | SetVideoResolutionRequest | SetVideoResolutionResponse | Set the video resolution of the device | [Open](./doc/config-schemas/setVideoResolution.md) |
 | SET_BLOCK_PERSON_TO_AC | SetBlockPersonToACRequest | SetBlockPersonToACResponse | Block a person in the access control | [Open](./doc/config-schemas/setBlockPersonToAC.md) |
+|GET_INPUTS | GetInputsRequest | GetInputsResponse | Get a list of inputs in the device | [Open] (./doc/config-schemas/getInputs.md) |
 | GET_MICROPHONES | GetMicrophonesRequest | GetMicrophonesResponse | Get the microphones of the device | [Open] (./doc/config-schemas/getMicrophones.md) |
+

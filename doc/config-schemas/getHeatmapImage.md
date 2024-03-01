@@ -3,7 +3,7 @@
 
 ## Descripcion
 
-Reproducir un clip de audio
+Obtener mapa de calor en base a un tiempo
 
 ## Request Message
 
@@ -12,7 +12,7 @@ Reproducir un clip de audio
     ...
     "data": {
         "deviceData": {...},
-        "configKey": "actionPlayAudioClip",
+        "configKey": "getHeatmapImage",
         "value":{
             "channelNumber": 1,
             "start": "2019-01-01T00:00:00Z",
