@@ -26,14 +26,14 @@ El Request Message de `getMicrophones` no necesita value. El driver solo con el 
     ...,
     "data": [{
         "name": "string",
-        "channelNumber": 1,
+        "endabled": true,
         "id": "string"
     }]
 }
 ```
 
-| Campo         | Tipo   | Descripcion                  |
-| ------------- | ------ | ---------------------------- |
-| name          | string | El nombre del micrófono      |
-| channelNumber | number | El canal del micrófono       |
-| id            | string | Id interno del micrófono     |
+| Campo   | Tipo    | Descripcion              |
+| ------- | ------- | ------------------------ |
+| name    | string  | El nombre del micrófono  |
+| enabled | boolean | está o no habilitado     |
+| id      | string  | Id interno del micrófono |
