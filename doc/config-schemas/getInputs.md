@@ -27,13 +27,17 @@ El Request Message de `getInputs` no necesita value. El driver solo con el confi
     "data": [{
         "name": "string",
         "id": "string",
-        "description": "string"
+        "description": "string",
+        "enabled": true,
+        "type": 0
     }]
 }
 ```
 
-| Campo       | Tipo   | Descripcion               |
-| ----------- | ------ | ------------------------- |
-| name        | string | El nombre de la entrada   |
-| id          | string | Id interno de la entrada  |
-| description | string | Descripción de la entrada |
+| Campo       | Tipo    | Descripcion                            |
+| ----------- | ------- | -------------------------------------- |
+| name        | string  | El nombre de la entrada                |
+| id          | string  | Id interno de la entrada               |
+| description | string  | Descripción de la entrada              |
+| enabled     | boolean | está o no habilitado                   |
+| type        | int     | 0=contacto, 1=movimiento, 2=perimetral |
