@@ -11,7 +11,7 @@ Obtener informacion sobre si el video en blanco y negro esta habilitado
     ...
     "data": {
         "deviceData": {...},
-        "configKey": "getVideoBlackAndWhiteStatus",
+        "configKey": "getVideoInBlackAndWhiteStatus",
         "value": {
             "channelNumber": 1
         }
