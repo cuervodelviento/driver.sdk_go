@@ -38,5 +38,5 @@ Obtener todas las salidas disponibles en el dispositivo
 | --- | --- | --- |
 | id | string | id de la salida |
 | name | string | nombre de la salida |
-| type | int | tipo de salida, 0 = relay, 1 = led |
-| state | int | estado de la salida, 0 = normalmente abierto, 1 = normalmente cerrado, 2 = encendido, 3 = apagado |
+| type | int | tipo de salida, -1 = unknown, 0 = relay, 1  = led, 2 = beep |
+| state | int | estado de la salida, -1 = unknown, 0 = normalmente abierto, 1 = normalmente cerrado, 2 = encendido, 3 = apagado |

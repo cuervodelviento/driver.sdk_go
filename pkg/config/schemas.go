@@ -264,3 +264,7 @@ type SetBlockPersonToACRequest struct {
 }
 
 type SetBlockPersonToACResponse error
+
+type DeleteAllPeopleACRequest struct{}
+
+type DeleteAllPeopleACResponse error
