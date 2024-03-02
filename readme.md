@@ -144,3 +144,4 @@ Los marcados con * son obligatorios.
 | SET_VIDEO_RESOLUTION | SetVideoResolutionRequest | SetVideoResolutionResponse | Set the video resolution of the device | [Open](./doc/config-schemas/setVideoResolution.md) |
 | SET_BLOCK_PERSON_TO_AC | SetBlockPersonToACRequest | SetBlockPersonToACResponse | Block a person in the access control | [Open](./doc/config-schemas/setBlockPersonToAC.md) |
 | DELETE_ALL_PEOPLE_AC | DeleteAllPeopleACRequest | DeleteAllPeopleACResponse | Eliminar todas las personas de la lista de acceso del dispositivo | [Open](./doc/config-schemas/deleteAllPeopleAC.md) |
+|GET_INPUTS | GetInputsRequest | GetInputsResponse | Get a list of inputs in the device | [Open] (./doc/config-schemas/getInputs.md) |

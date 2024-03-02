@@ -268,3 +268,13 @@ type SetBlockPersonToACResponse error
 type DeleteAllPeopleACRequest struct{}
 
 type DeleteAllPeopleACResponse error
+type GetInputsResponseItem struct {
+	ID          string `json:"id"`
+	Name        string `json:"name"`
+	Description string `json:"description"`
+	Enabled     bool   `json:"enabled"`
+	Type        int    `json:"type"`
+}
+
+// https://github.com/Netsocs-Team/DevDocs/blob/main/markdown/drivers/config-schemas/getChannels.md
+type GetInputsResponse []*GetInputsResponseItem

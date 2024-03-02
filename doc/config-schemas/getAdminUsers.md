@@ -39,7 +39,7 @@ Solo el nombre de usuario para no revelear el password del admin
 | Campo | Tipo | Descripcion |
 | --- | --- | --- |
 | userName | string | nombre del usuario  |
-| status | int | Estado del usuario, 0: Online, 1: Offline, 2: Unknown |
+| status | int | Estado del usuario, -1: Unknown, 0: Online, 1: Offline |
 | created_at | string or null | Fecha de creacion del usuario en formato ISO 8601 |
 | last_login | string or null | Fecha del ultimo login del usuario en formato ISO 8601 |
 | last_logout | string or null | Fecha del ultimo logout del usuario en formato ISO 8601 |
