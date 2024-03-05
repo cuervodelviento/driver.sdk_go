@@ -15,7 +15,7 @@ Agregar un rostro a una persona en un control de acceso
         "configKey": "setFaceToPersonAC",
         "value":{
             "personId": "string",
-            "photosURL": ["string"],
+            "faces": ["string"],
         } // no needed
     }
 }
