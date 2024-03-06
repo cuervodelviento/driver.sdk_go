@@ -278,3 +278,11 @@ type GetInputsResponseItem struct {
 
 // https://github.com/Netsocs-Team/DevDocs/blob/main/markdown/drivers/config-schemas/getChannels.md
 type GetInputsResponse []*GetInputsResponseItem
+
+type GetMicrophoneResponseItem struct {
+	Name    string `json:"name"`
+	Enabled bool   `json:"enabled"`
+	ID      string `json:"id"`
+}
+
+type GetMicrophoneResponse []*GetMicrophoneResponseItem
