@@ -182,6 +182,12 @@ type GetAdminUsersResponseItem struct {
 	LastIP     *string `json:"last_ip"`
 }
 
+type GetCurrentVideoResolutionByChannelRequest struct {
+	ChannelNumber int `json:"channelNumber"`
+}
+type GetCurrentVideoResolutionByChannelResponse struct {
+	Resolution string `json:"resolution"`
+}
 type GetAvailableVideoResolutionsRequest struct {
 	ChannelNumber int `json:"channelNumber"`
 }
