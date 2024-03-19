@@ -146,4 +146,5 @@ Los marcados con * son obligatorios.
 | DELETE_ALL_PEOPLE_AC | DeleteAllPeopleACRequest | DeleteAllPeopleACResponse | Eliminar todas las personas de la lista de acceso del dispositivo | [Open](./doc/config-schemas/deleteAllPeopleAC.md) |
 |GET_INPUTS | GetInputsRequest | GetInputsResponse | Get a list of inputs in the device | [Open](./doc/config-schemas/getInputs.md) |
 | GET_MICROPHONES | GetMicrophonesRequest | GetMicrophonesResponse | Get the microphones of the device |[Open](./doc/config-schemas/getMicrophones.md) |
+| GET_CURRENT_VIDEO_RESOLUTION_BY_CHANNEL | GetCurrentVideoResolutionByChannelRequest | GetCurrentVideoResolutionByChannelResponse | Get the current video resolution of a channel |[Open](./doc/config-schemas/getCurrentVideoResolutionByChannel.md) |
 
