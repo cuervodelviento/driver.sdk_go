@@ -150,7 +150,7 @@ type GetAvailableSpeakersResponseItem struct {
 type GetStorageRequest struct{}
 type GetStorageResponse []*GetStorageResponseItem
 type GetStorageResponseItem struct {
-	ID         int    `json:"id"`
+	ID         string `json:"id"`
 	DeviceName string `json:"deviceName"`
 	Recording  bool   `json:"recording"`
 	FreeSize   int    `json:"freeSize"`
