@@ -24,7 +24,7 @@ Obtener todas las unidades de almacenamiento disponibles en el dispositivo
 {
     ...,
     "data": [ {
-    "id": "0",
+    "id": "42b0f590-6e86-4b7a-8dc0-44056b28c018",
     "deviceName":"DeviceTest",
     "recording": true,
     "freeSize":5000, 
