@@ -13,6 +13,7 @@ Modificar credenciales del usuario admin
         "deviceData": {...},
         "configKey": "setAdminUser",
         "value": {
+            "id": "abc123",
             "username": "username",
             "prevPassword": "***",
             "newPassword": "***"
