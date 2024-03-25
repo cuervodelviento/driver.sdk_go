@@ -24,7 +24,7 @@ Obtener todos los usuarios admin del dispositivo
 {
     ...,
     "data": [ {
-    "id" : "abc123",
+    "id" : "68e5cc48-e23f-46b5-a491-2a623fccf658",
     "username": "username",
     "status": 0,
     "created_at": "2021-08-12T00:00:00Z",
