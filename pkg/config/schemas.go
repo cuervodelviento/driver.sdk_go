@@ -253,8 +253,8 @@ type GetFlipVideoStatusResponse struct {
 }
 
 type ActionPlayAudioClipRequest struct {
-	ChannelNumber int    `json:"channelNumber"`
-	SpeakerID     string `json:"speakerId"`
+	AudioClipURL string `json:"audioClipUrl"` // URL of the audio clip
+	SpeakerID    string `json:"speakerId"`
 }
 
 type ActionPlayAudioClipResponse error
