@@ -295,14 +295,17 @@ type GetMicrophoneResponse []*GetMicrophoneResponseItem
 
 type GetFtpInfoRequest struct{}
 
-type GetFtpInfoResponse struct {
+type GetFtpInfoResponseItem struct {
+	ID        string `json:"id"`
 	Host      string `json:"host"`
 	Port      int    `json:"port"`
 	Username  string `json:"username"`
 	Directoty string `json:"directory"`
 }
+type GetFtpInfoResponse []*GetFtpInfoResponseItem
 
 type SetFtpInfoRequest struct {
+	ID        string `json:"id"`
 	Host      string `json:"host"`
 	Port      int    `json:"port"`
 	Username  string `json:"username"`

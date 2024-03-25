@@ -13,6 +13,7 @@ Modificar la informacion de la configuracion ftp del dispositivo
         "deviceData": {...},
         "configKey": "setFtpInfo",
         "value": {
+            "id": "abc123",
             "host": "1.1.1.1",
             "user": "admin",
             "password": "admin",
@@ -25,6 +26,7 @@ Modificar la informacion de la configuracion ftp del dispositivo
 
 | Campo | Tipo | Descripcion |
 | --- | --- | --- |
+| id | string | uuid |
 | host | string | ip del servidor ftp |
 | user | string | usuario ftp |
 | password | string | contraseña ftp |
