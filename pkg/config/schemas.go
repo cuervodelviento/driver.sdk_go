@@ -292,3 +292,22 @@ type GetMicrophoneResponseItem struct {
 }
 
 type GetMicrophoneResponse []*GetMicrophoneResponseItem
+
+type GetFtpInfoRequest struct{}
+
+type GetFtpInfoResponse struct {
+	Host      string `json:"host"`
+	Port      int    `json:"port"`
+	Username  string `json:"username"`
+	Directoty string `json:"directory"`
+}
+
+type SetFtpInfoRequest struct {
+	Host      string `json:"host"`
+	Port      int    `json:"port"`
+	Username  string `json:"username"`
+	Password  string `json:"password"`
+	Directoty string `json:"directory"`
+}
+
+type SetFtpInfoResponse error
