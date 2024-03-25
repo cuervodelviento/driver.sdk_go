@@ -19,6 +19,8 @@ Modificar la informacion de la configuracion ftp del dispositivo
             "password": "admin",
             "directory": "/directory",
             "port": 21,
+            "encryption": "plain",
+            "mode": "passive"
         } 
     }
 }
@@ -32,6 +34,8 @@ Modificar la informacion de la configuracion ftp del dispositivo
 | password | string | contraseña ftp |
 | directory | string | directorio en cual se desea almacenar guardar |
 | port | int | puerto del servidor ftp |
+| encryption | select | tipo de encriptacion: [plain, explicit, implicit] |
+| mode | select | modo de conexion: [ommited, active, passive] |
 
 
 

@@ -296,21 +296,25 @@ type GetMicrophoneResponse []*GetMicrophoneResponseItem
 type GetFtpInfoRequest struct{}
 
 type GetFtpInfoResponseItem struct {
-	ID        string `json:"id"`
-	Host      string `json:"host"`
-	Port      int    `json:"port"`
-	Username  string `json:"username"`
-	Directoty string `json:"directory"`
+	ID         string `json:"id"`
+	Host       string `json:"host"`
+	Port       int    `json:"port"`
+	Username   string `json:"username"`
+	Directory  string `json:"directory"`
+	Encryption string `json:"encryption"`
+	Mode       string `json:"mode"`
 }
 type GetFtpInfoResponse []*GetFtpInfoResponseItem
 
 type SetFtpInfoRequest struct {
-	ID        string `json:"id"`
-	Host      string `json:"host"`
-	Port      int    `json:"port"`
-	Username  string `json:"username"`
-	Password  string `json:"password"`
-	Directoty string `json:"directory"`
+	ID         string `json:"id"`
+	Host       string `json:"host"`
+	Port       int    `json:"port"`
+	Username   string `json:"username"`
+	Password   string `json:"password"`
+	Directory  string `json:"directory"`
+	Encryption string `json:"encryption"`
+	Mode       string `json:"mode"`
 }
 
 type SetFtpInfoResponse error
