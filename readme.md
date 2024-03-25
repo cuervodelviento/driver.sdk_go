@@ -112,7 +112,7 @@ Los marcados con * son obligatorios.
 | ACTION_LISTEN_EVENTS (*) | ListenEventsRequest | ListenEventsResponse | Listen the events of the device | [Open](./doc/config-schemas/actionListenEvent.md) |
 | ACTION_OUTPUT_PULSE | OutputPulseRequest | OutputPulseResponse | Send a pulse to the device | [Open](./doc/config-schemas/actionOutputPulse.md) |
 | ACTION_PING_DEVICE (*) | PingDeviceRequest | PingDeviceResponse | Ping the device | [Open](./doc/config-schemas/actionPingDevice.md) |
-| ACTION_PLAY_AUDIO_CLIP | PlayAudioClipRequest | PlayAudioClipResponse | Play an audio clip in the device | [Open](./doc/config-schemas/actionPlayAudioClip.md) |
+| ACTION_PLAY_AUDIO_CLIP | ActionPlayAudioClipRequest | ActionPlayAudioClipResponse | Play an audio clip in the device | [Open](./doc/config-schemas/actionPlayAudioClip.md) |
 | ACTION_RESTART_DEVICE | RestartDeviceRequest | RestartDeviceResponse | Restart the device | [Open](./doc/config-schemas/actionRestart.md) |
 | ACTION_STOP_LISTEN_EVENT (*) | StopListenEventRequest | StopListenEventResponse | Stop listening the events of the device | [Open](./doc/config-schemas/actionStopListenEvent.md) |
 | ACTION_ZOOM | ZoomRequest | ZoomResponse | Zoom the device | MISSING |

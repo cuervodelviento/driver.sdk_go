@@ -257,6 +257,8 @@ type ActionPlayAudioClipRequest struct {
 	SpeakerID     string `json:"speakerId"`
 }
 
+type ActionPlayAudioClipResponse error
+
 type GetHeatmapImageRequest struct {
 	ChannelNumber int `json:"channelNumber"`
 	// Start in format ISO 8601
