@@ -81,7 +81,10 @@ type GetAdminUserRequest struct{}
 type GetAdminUserResponse []*GetAdminUserResponseItem
 
 type GetAdminUserResponseItem struct {
-	Username string `json:"username"`
+	ID        int    `json:"id"`
+	Username  string `json:"username"`
+	Status    int    `json:"status"`
+	CreatedAt string `json:"created_at"`
 }
 
 type GetRecordingSourceRequest struct {
@@ -159,6 +162,7 @@ type GetStorageResponseItem struct {
 }
 
 type SetAdminUserRequest struct {
+	ID           int    `json:"id"`
 	Username     string `json:"username"`
 	PrevPassword string `json:"prevPassword"`
 	NewPassword  string `json:"newPassword"`
