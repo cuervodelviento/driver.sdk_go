@@ -37,6 +37,7 @@ Modificar la informacion de la configuracion ftp del dispositivo
 | encryption | select | tipo de encriptacion: [plain, explicit, implicit] |
 | mode | select | modo de conexion: [ommited, active, passive] |
 
+More info about encryption and mode in [Get ftp info](getFtpInfo.md)
 
 
 
