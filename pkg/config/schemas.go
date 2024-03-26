@@ -14,8 +14,8 @@ type GetChannelResponse []*GetChannelResponseItem
 type SetUserRequest struct {
 	ID           string `json:"id"`
 	Username     string `json:"username"`
-	PrevPassword string `json:"prevPassword"`
-	NewPassword  string `json:"newPassword"`
+	PrevPassword string `json:"prev_password"`
+	NewPassword  string `json:"new_password"`
 }
 
 // https://github.com/Netsocs-Team/DevDocs/blob/main/markdown/drivers/config-schemas/setUsers.md
@@ -46,7 +46,7 @@ type GetUserResponseItem struct {
 	// Last logout in format ISO 8601
 	LastLogout  *string `json:"last_logout"`
 	LastIP      *string `json:"last_ip"`
-	IsAdminUser bool    `json:"isAdminUser"`
+	IsAdminUser bool    `json:"is_admin_user"`
 }
 type GetUserResponse []*GetUserResponseItem
 
