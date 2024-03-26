@@ -11,15 +11,12 @@ type GetChannelResponseItem struct {
 type GetChannelResponse []*GetChannelResponseItem
 
 // https://github.com/Netsocs-Team/DevDocs/blob/main/markdown/drivers/config-schemas/setUsers.md
-type SetUserRequestItem struct {
-	ID       int    `json:"id"`
-	Used     bool   `json:"used"`
-	UserName string `json:"userName"`
-	Password string `json:"password"`
+type SetUserRequest struct {
+	ID           string `json:"id"`
+	Username     string `json:"username"`
+	PrevPassword string `json:"prevPassword"`
+	NewPassword  string `json:"newPassword"`
 }
-
-// https://github.com/Netsocs-Team/DevDocs/blob/main/markdown/drivers/config-schemas/setUsers.md
-type SetUserRequest []*SetUserRequestItem
 
 // https://github.com/Netsocs-Team/DevDocs/blob/main/markdown/drivers/config-schemas/setUsers.md
 type SetUserResponse error
@@ -37,9 +34,17 @@ type GetUserRequest struct{}
 
 // https://github.com/Netsocs-Team/DevDocs/blob/main/markdown/drivers/config-schemas/getUsers.md
 type GetUserResponse struct {
-	ID       int    `json:"id"`
-	Enabled  bool   `json:"enabled"`
-	UserName string `json:"userName"`
+	ID       string `json:"id"`
+	Username string `json:"username"`
+	// 0: Online, 1: Offline, 2: Unknown
+	Status int `json:"status"`
+	// Created at in format ISO 8601
+	CreatedAt *string `json:"created_at"`
+	// Last login in format ISO 8601
+	LastLogin *string `json:"last_login"`
+	// Last logout in format ISO 8601
+	LastLogout *string `json:"last_logout"`
+	LastIP     *string `json:"last_ip"`
 }
 
 // https://github.com/Netsocs-Team/DevDocs/blob/main/markdown/drivers/config-schemas/setAddPersonToAC.md
@@ -161,32 +166,31 @@ type GetStorageResponseItem struct {
 	Status     int    `json:"status"`
 }
 
-type SetAdminUserRequest struct {
-	ID           string `json:"id"`
-	Username     string `json:"username"`
-	PrevPassword string `json:"prevPassword"`
-	NewPassword  string `json:"newPassword"`
-}
+// type SetAdminUserRequest struct {
+// 	ID           string `json:"id"`
+// 	Username     string `json:"username"`
+// 	PrevPassword string `json:"prevPassword"`
+// 	NewPassword  string `json:"newPassword"`
+// }
 
-type SetAdminUserResponse error
+// type SetAdminUserResponse error
 
-type GetAdminUsersRequest struct{}
+// type GetAdminUsersRequest struct{}
 
-type GetAdminUsersResponse []*GetAdminUsersResponseItem
-type GetAdminUsersResponseItem struct {
-	ID       string `json:"id"`
-	Username string `json:"username"`
-	// 0: Online, 1: Offline, 2: Unknown
-	Status int `json:"status"`
-	// Created at in format ISO 8601
-	CreatedAt *string `json:"created_at"`
-	// Last login in format ISO 8601
-	LastLogin *string `json:"last_login"`
-	// Last logout in format ISO 8601
-	LastLogout *string `json:"last_logout"`
-	LastIP     *string `json:"last_ip"`
-	IsAdmin    bool    `json:"is_admin"`
-}
+// type GetAdminUsersResponse []*GetAdminUsersResponseItem
+// type GetAdminUsersResponseItem struct {
+// 	ID       string `json:"id"`
+// 	Username string `json:"username"`
+// 	// 0: Online, 1: Offline, 2: Unknown
+// 	Status int `json:"status"`
+// 	// Created at in format ISO 8601
+// 	CreatedAt *string `json:"created_at"`
+// 	// Last login in format ISO 8601
+// 	LastLogin *string `json:"last_login"`
+// 	// Last logout in format ISO 8601
+// 	LastLogout *string `json:"last_logout"`
+// 	LastIP     *string `json:"last_ip"`
+// }
 
 type GetCurrentVideoResolutionByChannelRequest struct {
 	ChannelNumber int `json:"channelNumber"`
