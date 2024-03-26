@@ -29,7 +29,8 @@ Lista de usuarios con credenciales
     "created_at": "2021-08-12T00:00:00Z",
     "last_login": "2021-08-12T00:00:00Z",
     "last_logout": "2021-08-12T00:00:00Z",
-    "last_ip": "127.0.0.1"
+    "last_ip": "127.0.0.1",
+    "is_admin_user": true
     }]
 }
 ```
