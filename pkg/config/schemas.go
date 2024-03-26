@@ -185,6 +185,7 @@ type GetAdminUsersResponseItem struct {
 	// Last logout in format ISO 8601
 	LastLogout *string `json:"last_logout"`
 	LastIP     *string `json:"last_ip"`
+	IsAdmin    bool    `json:"is_admin"`
 }
 
 type GetCurrentVideoResolutionByChannelRequest struct {
