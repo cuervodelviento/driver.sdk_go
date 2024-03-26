@@ -17,16 +17,15 @@ Editar lista de usuarios del dispositivo
     "data": {
         "deviceData": {...},
         "configKey": "setUsers",
-        "value": [{
-           "id" : 0,
-           "used": true,
-           "userName": "test",
-           "password":"...",
-        }]
+        "value": {
+            "id": "68e5cc48-e23f-46b5-a491-2a623fccf658",
+            "username": "username",
+            "prev_password": "***",
+            "new_password": "***"
+        } 
     }
 }
 ```
-
 
 
 ## Response Message
