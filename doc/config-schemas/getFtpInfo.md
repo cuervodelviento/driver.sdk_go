@@ -45,7 +45,7 @@ Obtener la informacion de la configuracion ftp del dispositivo
 | directory | string | directorio en cual se desea almacenar guardar |
 | port | int | puerto del servidor ftp |
 | encryption | select | tipo de encriptacion: [plain, explicit, implicit] |
-| mode | select | modo de conexion: [ommited, active, passive] |
+| mode | select | modo de conexion: [omitted, active, passive] |
 
 ## Encryption
 
