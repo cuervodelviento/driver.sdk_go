@@ -33,7 +33,8 @@ type DeleteUserResponse error
 type GetUserRequest struct{}
 
 // https://github.com/Netsocs-Team/DevDocs/blob/main/markdown/drivers/config-schemas/getUsers.md
-type GetUserResponse struct {
+
+type GetUserResponseItem struct {
 	ID       string `json:"id"`
 	Username string `json:"username"`
 	// 0: Online, 1: Offline, 2: Unknown
@@ -43,9 +44,11 @@ type GetUserResponse struct {
 	// Last login in format ISO 8601
 	LastLogin *string `json:"last_login"`
 	// Last logout in format ISO 8601
-	LastLogout *string `json:"last_logout"`
-	LastIP     *string `json:"last_ip"`
+	LastLogout  *string `json:"last_logout"`
+	LastIP      *string `json:"last_ip"`
+	IsAdminUser bool    `json:"isAdminUser"`
 }
+type GetUserResponse []*GetUserResponseItem
 
 // https://github.com/Netsocs-Team/DevDocs/blob/main/markdown/drivers/config-schemas/setAddPersonToAC.md
 type SetAddPersonToACRequest struct {
