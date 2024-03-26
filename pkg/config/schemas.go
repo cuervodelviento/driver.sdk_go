@@ -174,6 +174,7 @@ type GetAdminUsersRequest struct{}
 
 type GetAdminUsersResponse []*GetAdminUsersResponseItem
 type GetAdminUsersResponseItem struct {
+	ID       string `json:"id"`
 	Username string `json:"username"`
 	// 0: Online, 1: Offline, 2: Unknown
 	Status int `json:"status"`
