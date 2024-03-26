@@ -30,7 +30,8 @@ Obtener todos los usuarios admin del dispositivo
     "created_at": "2021-08-12T00:00:00Z",
     "last_login": "2021-08-12T00:00:00Z",
     "last_logout": "2021-08-12T00:00:00Z",
-    "last_ip": "127.0.0.1"
+    "last_ip": "127.0.0.1",
+    "is_admin": true
     }]
 }
 ```
@@ -46,3 +47,4 @@ Solo el nombre de usuario para no revelear el password del admin
 | last_login | string or null | Fecha del ultimo login del usuario en formato ISO 8601 |
 | last_logout | string or null | Fecha del ultimo logout del usuario en formato ISO 8601 |
 | last_ip | string or null | IP del ultimo login del usuario |
+| is_admin | boolean | Si el usuario es admin o no |
