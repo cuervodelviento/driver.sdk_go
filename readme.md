@@ -153,3 +153,4 @@ Los marcados con * son obligatorios.
 | SET_ALARM_PARTITION | SetAlarmPartitionRequest | SetAlarmPartitionResponse | Set Alarm partition name |[Open](./doc/config-schemas/setAlarmPartition.md) |
 | GET_ALARM_ZONES | GetAlarmZonesRequest | GetAlarmZonesResponse|Get alarm zones |[Open](./doc/config-schemas/getAlarmZones.md) |
 | SET_ALARM_ZONE | SetAlarmZoneRequest | SetAlarmZoneResponse | Set Alarm zone name |[Open](./doc/config-schemas/setAlarmZone.md) |
+| GET_ALARM_ZONE_STATUS | GetAlarmZoneStatusRequest | GetAlarmZoneStatusResponse | Get the status of a zone |[Open](./doc/config-schemas/getAlarmZoneStatus.md) |

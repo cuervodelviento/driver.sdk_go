@@ -370,3 +370,13 @@ type SetAlarmZoneRequest struct {
 }
 
 type SetAlarmZoneResponse error
+
+type GetAlarmZoneStatusRequest struct {
+	Number int `json:"number"`
+}
+
+type GetAlarmZoneStatusResponse struct {
+	AlarmState int  `json:"alarmState"`
+	Bypassed   bool `json:"bypassed"`
+	OpenClosed bool `json:"openClosed"`
+}

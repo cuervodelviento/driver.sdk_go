@@ -20,6 +20,11 @@ Setea el nombre de una zona
 }
 ```
 
+| Campo  | Tipo   | Descripcion       |
+| ------ | ------ | ----------------- |
+| number | int    | numero de la zona |
+| name   | string | nombre de la zona |
+
 ## Response Message
 
 ```json
