@@ -150,4 +150,6 @@ Los marcados con * son obligatorios.
 | GET_FTP_INFO | GetFtpInfoRequest | GetFtpInfoResponse | Get ftp device config  |[Open](./doc/config-schemas/getFtpInfo.md) |
 | SET_FTP_INFO | SetFtpInfoRequest | SetFtpInfoResponse | Set ftp device config  |[Open](./doc/config-schemas/setFtpInfo.md) |
 |GET_ALARM_PARTITIONS |GetAlarmPartitionsRequest | GetAlarmPartitionsResponse | Get Alarm partitions | [Open](./doc/config-schemas/setFtpInfo.md) |
+|SET_ALARM_PARTITION|SetAlarmPartitionRequest|SetAlarmPartitionResponse| Set Alarm partition name |[Open](./doc/config-schemas/setAlarmPartition.md) |
+
 

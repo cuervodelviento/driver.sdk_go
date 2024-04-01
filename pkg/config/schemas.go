@@ -345,3 +345,11 @@ type GetAlarmPartitionsResponseItem struct {
 }
 
 type GetAlarmPartitionsResponse []*GetAlarmPartitionsResponseItem
+
+type SetAlarmPartitionRequest struct {
+	Number   int    `json:"number"`
+	SystemId string `json:"systemId"`
+	Name     string `json:"name"`
+}
+
+type SetAlarmPartitionResponse error
