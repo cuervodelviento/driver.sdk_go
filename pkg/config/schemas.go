@@ -353,3 +353,13 @@ type SetAlarmPartitionRequest struct {
 }
 
 type SetAlarmPartitionResponse error
+
+type GetAlarmZonesResponseItem struct {
+	Number     int    `json:"number"`
+	Name       string `json:"name"`
+	AlarmState int    `json:"alarmState"`
+	Bypassed   bool   `json:"bypassed"`
+	OpenClosed bool   `json:"openClosed"`
+}
+
+type GetAlarmZonesResponse []*GetAlarmZonesResponseItem
