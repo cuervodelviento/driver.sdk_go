@@ -363,3 +363,10 @@ type GetAlarmZonesResponseItem struct {
 }
 
 type GetAlarmZonesResponse []*GetAlarmZonesResponseItem
+
+type SetAlarmZoneRequest struct {
+	Number int    `json:"number"`
+	Name   string `json:"name"`
+}
+
+type SetAlarmZoneResponse error
