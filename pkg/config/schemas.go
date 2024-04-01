@@ -333,3 +333,15 @@ type SetFtpInfoRequest struct {
 }
 
 type SetFtpInfoResponse error
+
+type GetAlarmPartitionsResponseItem struct {
+	Number       int    `json:"number"`
+	SystemId     string `json:"systemId"`
+	Name         string `json:"name"`
+	Enabled      bool   `json:"enabled"`
+	ArmedStatus  int    `json:"armedStatus"`
+	TroubleState int    `json:"troubleState"`
+	AlarmState   int    `json:"alarmState"`
+}
+
+type GetAlarmPartitionsResponse []*GetAlarmPartitionsResponseItem
