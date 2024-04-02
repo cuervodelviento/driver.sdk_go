@@ -449,3 +449,11 @@ type GetAlarmPartitionZonesRequest struct {
 }
 
 type GetAlarmPartitionZonesResponse []*GetAlarmZonesResponseItem
+
+type SetAddAlarmPartitionZoneRequest struct {
+	Number     int    `json:"number"`
+	SystemId   string `json:"systemId"`
+	ZoneNumber int    `json:"zoneNumber"`
+}
+
+type SetAddAlarmPartitionZoneResponse error

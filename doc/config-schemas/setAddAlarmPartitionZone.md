@@ -11,22 +11,22 @@ Arma una particion con un valor de armado
     ...
     "data": {
         "deviceData": {...},
-        "configKey": "actionAlarmFapPartition",
+        "configKey": "actionAlarmArmPartition",
         "value":{
             "number":1,
             "systemId": "xxx-xxxx",
-            "value":1
+            "zoneNumber":14
         }
     }
 }
 
 ```
 
-| Campo    | Tipo   | Descripcion                          |
-| -------- | ------ | ------------------------------------ |
-| number   | int    | numero de particion                  |
-| systemId | string | Id de sistema de la particion        |
-| value    | int    | valor de FAP 1:fire, 2:alarm,3:panic |
+| Campo      | Tipo   | Descripcion                   |
+| ---------- | ------ | ----------------------------- |
+| number     | int    | numero de particion           |
+| systemId   | string | Id de sistema de la particion |
+| zoneNumber | int    | numero de la zona             |
 
 ## Response Message
 

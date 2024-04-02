@@ -163,3 +163,4 @@ Los marcados con * son obligatorios.
 | ACTION_ALARM_DISARM_PARTITION | ActionAlarmDisarmPartitionRequest | ActionAlarmDisarmPartitionResponse | Disarms an alarm partition |[Open](./doc/config-schemas/actionAlarmDisarmPartition.md) |
 | ACTION_ALARM_FAP_PARTITION | ActionAlarmFAPPartitionRequest | ActionAlarmFAPPartitionResponse | activates fire, alarm,panic or another alarm |[Open](./doc/config-schemas/actionAlarmFAPPartition.md) |
 | GET_ALARM_PARTITION_ZONES | GetAlarmPartitionZonesRequest | GetAlarmPartitionZonesResponse | Get zones in a partition | |[Open](./doc/config-schemas/getAlarmPartitionZones.md) |
+| SET_ADD_ALARM_PARTITION_ZONE | SetAddAlarmPartitionZoneRequest | SetAddAlarmPartitionZoneResponse | Sets a zone to a partition |[Open](./doc/config-schemas/setAddAlarmPartitionZone.md) |

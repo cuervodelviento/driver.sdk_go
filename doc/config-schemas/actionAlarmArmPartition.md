@@ -26,7 +26,7 @@ Arma una particion con un valor de armado
 | -------- | ------ | ----------------------------------- |
 | number   | int    | numero de particion                 |
 | systemId | string | Id de sistema de la particion       |
-| value    | id     | valor de armado 1:away, 2:night etc |
+| value    | int     | valor de armado 1:away, 2:night etc |
 
 ## Response Message
 
