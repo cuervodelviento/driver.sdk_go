@@ -380,3 +380,11 @@ type GetAlarmZoneStatusResponse struct {
 	Bypassed   bool `json:"bypassed"`
 	OpenClosed bool `json:"openClosed"`
 }
+
+type SetAddAlarmUserRequest struct {
+	SystemId   string `json:"systemId"`
+	UserName   string `json:"userName"`
+	AccessCode string `json:"accessCode"`
+}
+
+type SetAddAlarmUserResponse error
