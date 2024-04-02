@@ -25,7 +25,6 @@ Obtener las particiones de una alarma y su informacion
     "data": [
     {
         "partitionId": "1",
-        "systemId": "xxxxx-xxxx",
         "name": "Perimetral Este",
         "enabled": true,
         "armedStatus": 0,
@@ -39,7 +38,6 @@ Obtener las particiones de una alarma y su informacion
 | Campo        | Tipo    | Descripcion                                                                         |
 | ------------ | ------- | ----------------------------------------------------------------------------------- |
 | partitionId  | string  | id de la partición                                                                  |
-| systemId     | string  | id interno del dispositivo                                                          |
 | name         | string  | nombre de la partición                                                              |
 | enabled      | boolean | particion activa                                                                    |
 | armedStatus  | int     | Estado de la particion= 0: desarmada, 1:armada away, 2: armada stay, 3:armada night |

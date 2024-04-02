@@ -351,7 +351,6 @@ type GetAllPeopleFromACResponse []*GetAllPeopleFromACResponseItem
 
 type GetAlarmPartitionsResponseItem struct {
 	PartitionId  string `json:"partitionId"`
-	SystemId     string `json:"systemId"`
 	Name         string `json:"name"`
 	Enabled      bool   `json:"enabled"`
 	ArmedStatus  int    `json:"armedStatus"`
@@ -363,7 +362,6 @@ type GetAlarmPartitionsResponse []*GetAlarmPartitionsResponseItem
 
 type SetAlarmPartitionRequest struct {
 	PartitionId string `json:"partitionId"`
-	SystemId    string `json:"systemId"`
 	Name        string `json:"name"`
 }
 

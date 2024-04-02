@@ -14,7 +14,6 @@ Setea el nombre de una partición
         "configKey": "setAlarmPartition",
         "value": {
             "partitionId": "1",
-            "systemId": "xxxxx-xxxx",
             "name": "Perimetral Este"
         }
     }
