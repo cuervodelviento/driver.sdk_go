@@ -24,15 +24,15 @@ Devuelve una lista de usuarios de una alarma
 {
     ...,
     "data": {
-       "systemId":"xxx-xxxx",
+       "partitionId":"xxx-xxxx",
         "userName": "Em-32",
         "userId:"xxx-xxxx",
     }
 }
 ```
 
-| Campo    | Tipo   | Descripcion                   |
-| -------- | ------ | ----------------------------- |
-| systemId | string | Id de sistema de la particion |
-| userId   | string | Id de sistema de el usuario   |
-| userName | string | Nombre del usuario            |
+| Campo       | Tipo   | Descripcion        |
+| ----------- | ------ | ------------------ |
+| partitionId | string | Id de la particion |
+| userId      | string | Id de el usuario   |
+| userName    | string | Nombre del usuario |
