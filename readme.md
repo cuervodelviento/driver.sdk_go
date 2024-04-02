@@ -157,3 +157,4 @@ Los marcados con * son obligatorios.
 | SET_ADD_ALARM_USER | SetAddAlarmUserRequest | SetAddAlarmUserResponse | Add an user to a partition |[Open](./doc/config-schemas/setAddAlarmUser.md) |
 | SET_ALARM_USER | SetAlarmUserRequest | SetAlarmUserResponse | Set an user of a partition |[Open](./doc/config-schemas/setAlarmUser.md) |
 | GET_ALARM_USERS | GetAlarmUsersRequest | GetAlarmUsersResponse | Get a list of users of an alarm |[Open](./doc/config-schemas/getAlarmUsers.md) |
+| GET_ALARM_ARM_STATES | GetAlarmArmStatesRequest | GetAlarmArmStatesResponse | Get a list of arm states avaliable |[Open](./doc/config-schemas/getAlarmArmStates.md) |

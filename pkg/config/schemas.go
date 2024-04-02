@@ -405,3 +405,10 @@ type GetAlarmUsersResponseItem struct {
 }
 
 type GetAlarmUsersResponse []*GetAlarmUsersResponseItem
+
+type GetAlarmArmStatesResponseItem struct {
+	ArmedStatus string `json:"armedStatus"`
+	Value       int    `json:"value"`
+}
+
+type GetAlarmArmStatesResponse []*GetAlarmArmStatesResponseItem
