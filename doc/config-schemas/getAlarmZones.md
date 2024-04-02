@@ -1,5 +1,4 @@
-# Get storages config
-
+# Get zones from an alarm
 ## Descripcion
 
 Obtener las zonas de una alarma y su informacion

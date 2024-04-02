@@ -1,4 +1,4 @@
-# Set Add Person To AC
+# Gets users from an alarm
 
 ## Descripcion
 

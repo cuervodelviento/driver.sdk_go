@@ -1,4 +1,4 @@
-# Get Current Video Resolution By Channel
+# Get gets the status of a zone
 
 ## Descripcion
 

@@ -1,4 +1,4 @@
-# Set Add Person To AC
+# Set user To Alarm partition
 
 ## Descripcion
 
@@ -11,7 +11,7 @@ Agrega un usuario a una particion de alarma
     ...
     "data": {
         "deviceData": {...},
-        "configKey": "setAddAlarmUser",
+        "configKey": "setAlarmUser",
         "value":{
             "systemId":"xxx-xxxx",
             "userName": "Em-32",

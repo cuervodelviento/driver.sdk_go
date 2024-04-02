@@ -1,4 +1,4 @@
-# Get storages config
+# Get zones from an alarm partitions
 
 ## Descripcion
 

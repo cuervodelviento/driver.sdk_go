@@ -1,4 +1,4 @@
-# Set Add Person To AC
+# Set Add user To Alarm partition
 
 ## Descripcion
 

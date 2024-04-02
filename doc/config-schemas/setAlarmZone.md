@@ -1,4 +1,4 @@
-# Get storages config
+# Sets a zone name
 
 ## Descripcion
 
