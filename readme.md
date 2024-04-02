@@ -161,4 +161,5 @@ Los marcados con * son obligatorios.
 | GET_ALARM_FAP_STATES | GetAlarmFAPStatesRequest | GetAlarmFAPStatesResponse | Get a list of Fire Alarm Panic states avaliable |[Open](./doc/config-schemas/getAlarmFAPStates.md) |
 | ACTION_ALARM_ARM_PARTITION | ActionAlarmArmPartitionRequest | ActionAlarmArmPartitionResponse | Arms an alarm partition with an arm value |[Open](./doc/config-schemas/actionAlarmArmPartition.md) |
 | ACTION_ALARM_DISARM_PARTITION | ActionAlarmDisarmPartitionRequest | ActionAlarmDisarmPartitionResponse | Disarms an alarm partition |[Open](./doc/config-schemas/actionAlarmDisarmPartition.md) |
-| ACTION_ALARM_FAP_PARTITION | ActionAlarmFAPPartitionRequest | ActionAlarmFAPPartitionResponse | activates fire, alarm,panic or another alarm ||[Open](./doc/config-schemas/actionAlarmFAPPartition.md) |
+| ACTION_ALARM_FAP_PARTITION | ActionAlarmFAPPartitionRequest | ActionAlarmFAPPartitionResponse | activates fire, alarm,panic or another alarm |[Open](./doc/config-schemas/actionAlarmFAPPartition.md) |
+| GET_ALARM_PARTITION_ZONES | GetAlarmPartitionZonesRequest | GetAlarmPartitionZonesResponse | Get zones in a partition | |[Open](./doc/config-schemas/getAlarmPartitionZones.md) |

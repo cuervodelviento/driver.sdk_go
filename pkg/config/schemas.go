@@ -442,3 +442,10 @@ type ActionAlarmFAPPartitionRequest struct {
 }
 
 type ActionAlarmFAPPartitionResponse error
+
+type GetAlarmPartitionZonesRequest struct {
+	Number   int    `json:"number"`
+	SystemId string `json:"systemId"`
+}
+
+type GetAlarmPartitionZonesResponse []*GetAlarmZonesResponseItem
