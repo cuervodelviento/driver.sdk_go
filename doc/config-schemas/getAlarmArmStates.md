@@ -2,7 +2,8 @@
 
 ## Descripcion
 
-Obtener lista de estados de armado disponibles
+Obtener lista de estados de armado disponibles, para mostrar únicamente los que estan
+disponibles en el sistema
 
 ## Request Message
 
@@ -25,13 +26,13 @@ Obtener lista de estados de armado disponibles
     "data": [
     {
         "armedStatus":"Away",
-        "value": 0
+        "value": 1
     }
 ]
 }
 ```
 
-| Campo       | Tipo   | Descripcion      |
-| ----------- | ------ | ---------------- |
-| armedStatus | string | nombre de armado |
-| value       | int    | valor del estado |
+| Campo       | Tipo   | Descripcion                            |
+| ----------- | ------ | -------------------------------------- |
+| armedStatus | string | nombre de armado (away,stay,night)     |
+| value       | int    | valor del estado away:1,stay:2,night:3 |

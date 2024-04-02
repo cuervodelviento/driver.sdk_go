@@ -13,7 +13,7 @@ Agrega un usuario a una particion de alarma
         "deviceData": {...},
         "configKey": "setAddAlarmUser",
         "value":{
-            "systemId":"xxx-xxxx",
+            "partitionId":"xxx-xxxx",
             "userName": "Em-32",
             "accessCode": "5125"
         }
@@ -22,11 +22,11 @@ Agrega un usuario a una particion de alarma
 
 ```
 
-| Campo      | Tipo   | Descripcion                   |
-| ---------- | ------ | ----------------------------- |
-| systemId   | string | Id de sistema de la particion |
-| userName   | string | Nombre del usuario            |
-| accessCode | string | codigo de acceso              |
+| Campo       | Tipo   | Descripcion        |
+| ----------- | ------ | ------------------ |
+| partitionId | string | Id de la particion |
+| userName    | string | Nombre del usuario |
+| accessCode  | string | codigo de acceso   |
 
 ## Response Message
 

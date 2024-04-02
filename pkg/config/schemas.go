@@ -350,7 +350,7 @@ type GetAllPeopleFromACResponseItem struct {
 type GetAllPeopleFromACResponse []*GetAllPeopleFromACResponseItem
 
 type GetAlarmPartitionsResponseItem struct {
-	Number       int    `json:"number"`
+	PartitionId  string `json:"partitionId"`
 	SystemId     string `json:"systemId"`
 	Name         string `json:"name"`
 	Enabled      bool   `json:"enabled"`
@@ -362,15 +362,15 @@ type GetAlarmPartitionsResponseItem struct {
 type GetAlarmPartitionsResponse []*GetAlarmPartitionsResponseItem
 
 type SetAlarmPartitionRequest struct {
-	Number   int    `json:"number"`
-	SystemId string `json:"systemId"`
-	Name     string `json:"name"`
+	PartitionId string `json:"partitionId"`
+	SystemId    string `json:"systemId"`
+	Name        string `json:"name"`
 }
 
 type SetAlarmPartitionResponse error
 
 type GetAlarmZonesResponseItem struct {
-	Number     int    `json:"number"`
+	ZoneId     string `json:"zoneId"`
 	Name       string `json:"name"`
 	AlarmState int    `json:"alarmState"`
 	Bypassed   bool   `json:"bypassed"`
@@ -380,14 +380,16 @@ type GetAlarmZonesResponseItem struct {
 type GetAlarmZonesResponse []*GetAlarmZonesResponseItem
 
 type SetAlarmZoneRequest struct {
-	Number int    `json:"number"`
-	Name   string `json:"name"`
+	PartitionId string `json:"partitionId"`
+	ZoneId      string `json:"zoneId"`
+	Name        string `json:"name"`
 }
 
 type SetAlarmZoneResponse error
 
 type GetAlarmZoneStatusRequest struct {
-	Number int `json:"number"`
+	ZoneId      string `json:"zoneId"`
+	PartitionId string `json:"partitionId"`
 }
 
 type GetAlarmZoneStatusResponse struct {
@@ -397,26 +399,26 @@ type GetAlarmZoneStatusResponse struct {
 }
 
 type SetAddAlarmUserRequest struct {
-	SystemId   string `json:"systemId"`
-	UserName   string `json:"userName"`
-	AccessCode string `json:"accessCode"`
+	PartitionId string `json:"partitionId"`
+	UserName    string `json:"userName"`
+	AccessCode  string `json:"accessCode"`
 }
 
 type SetAddAlarmUserResponse error
 
 type SetAlarmUserRequest struct {
-	UserId     string `json:"userId"`
-	SystemId   string `json:"systemId"`
-	UserName   string `json:"userName"`
-	AccessCode string `json:"accessCode"`
+	UserId      string `json:"userId"`
+	PartitionId string `json:"partitionId"`
+	UserName    string `json:"userName"`
+	AccessCode  string `json:"accessCode"`
 }
 
 type SetAlarmUserResponse error
 
 type GetAlarmUsersResponseItem struct {
-	UserId   string `json:"userId"`
-	SystemId string `json:"systemId"`
-	UserName string `json:"userName"`
+	UserId      string `json:"userId"`
+	PartitionId string `json:"partitionId"`
+	UserName    string `json:"userName"`
 }
 
 type GetAlarmUsersResponse []*GetAlarmUsersResponseItem
@@ -436,47 +438,41 @@ type GetFAPStatesResponseItem struct {
 type GetAlarmFAPStatesResponse []*GetFAPStatesResponseItem
 
 type ActionAlarmArmPartitionRequest struct {
-	Number   int    `json:"number"`
-	SystemId string `json:"systemId"`
-	Value    int    `json:"value"`
+	PartitionId string `json:"partitionId"`
+	Value       int    `json:"value"`
 }
 
 type ActionAlarmArmPartitionResponse error
 
 type ActionAlarmDisarmPartitionRequest struct {
-	Number   int    `json:"number"`
-	SystemId string `json:"systemId"`
+	PartitionId string `json:"partitionId"`
 }
 
 type ActionAlarmDisarmPartitionResponse error
 
 type ActionAlarmFAPPartitionRequest struct {
-	Number   int    `json:"number"`
-	SystemId string `json:"systemId"`
-	Value    int    `json:"value"`
+	PartitionId string `json:"partitionId"`
+	Value       int    `json:"value"`
 }
 
 type ActionAlarmFAPPartitionResponse error
 
 type GetAlarmPartitionZonesRequest struct {
-	Number   int    `json:"number"`
-	SystemId string `json:"systemId"`
+	PartitionId string `json:"partitionId"`
 }
 
 type GetAlarmPartitionZonesResponse []*GetAlarmZonesResponseItem
 
 type SetAddAlarmPartitionZoneRequest struct {
-	Number     int    `json:"number"`
-	SystemId   string `json:"systemId"`
-	ZoneNumber int    `json:"zoneNumber"`
+	PartitionId string `json:"partitionId"`
+	ZoneId      string `json:"zoneId"`
 }
 
 type SetAddAlarmPartitionZoneResponse error
 
 type SetDeleteAlarmPartitionZoneRequest struct {
-	Number     int    `json:"number"`
-	SystemId   string `json:"systemId"`
-	ZoneNumber int    `json:"zoneNumber"`
+	PartitionId string `json:"partitionId"`
+	ZoneId      string `json:"zoneId"`
 }
 
 type SetDeleteAlarmPartitionZoneResponse error

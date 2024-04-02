@@ -13,8 +13,8 @@ Arma una particion con un valor de armado
         "deviceData": {...},
         "configKey": "actionAlarmArmPartition",
         "value":{
-            "number":1,
-            "systemId": "xxx-xxxx",
+
+            "partitionId": "xxx-xxxx",
             "value":1
         }
     }
@@ -22,11 +22,10 @@ Arma una particion con un valor de armado
 
 ```
 
-| Campo    | Tipo   | Descripcion                         |
-| -------- | ------ | ----------------------------------- |
-| number   | int    | numero de particion                 |
-| systemId | string | Id de sistema de la particion       |
-| value    | int     | valor de armado 1:away, 2:night etc |
+| Campo       | Tipo   | Descripcion                           |
+| ----------- | ------ | ------------------------------------- |
+| partitionId | string | Id de sistema de la particion         |
+| value       | int    | valor de armado away:1,stay:2,night:3 |
 
 ## Response Message
 

@@ -1,4 +1,5 @@
 # Get zones from an alarm
+
 ## Descripcion
 
 Obtener las zonas de una alarma y su informacion
@@ -23,7 +24,7 @@ Obtener las zonas de una alarma y su informacion
     ...,
     "data": [
     {
-        "number": 1,
+        "zoneId": "1",
         "name": "Ventana 3, Sala 4",
         "alarmState": 1
         "byPassed": false,
@@ -33,10 +34,10 @@ Obtener las zonas de una alarma y su informacion
 }
 ```
 
-| Campo      | Tipo    | Descripcion                                     |
-| ---------- | ------- | ----------------------------------------------- |
-| number     | int     | numero de la zona                               |
-| name       | string  | nombre de la zona                               |
-| alarmState | int     | Estado de alarma: 0, ninguna, 1,2,3 POR DEFINIR |
-| byPassed   | boolean | si la zona se encuentra en bypass               |
-| openClosed | boolean | si se encuentra activo el openclosed            |
+| Campo      | Tipo    | Descripcion                                   |
+| ---------- | ------- | --------------------------------------------- |
+| zoneId     | string  | id de la zona, puede ser el numero de la zona |
+| name       | string  | nombre de la zona                             |
+| alarmState | int     | Estado de alarma: 0:sin activar, 1: en alarma |
+| byPassed   | boolean | si la zona se encuentra en bypass             |
+| openClosed | boolean | si se encuentra activo el openclosed          |

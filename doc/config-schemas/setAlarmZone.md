@@ -13,17 +13,19 @@ Setea el nombre de una zona
         "deviceData": {...},
         "configKey": "setAlarmZone",
         "value": {
-            "number": 1,
+            "partitionId" :"1",
+            "zoneId": "1",
             "name": "Ventana 3, Sala 4"
         }
     }
 }
 ```
 
-| Campo  | Tipo   | Descripcion       |
-| ------ | ------ | ----------------- |
-| number | int    | numero de la zona |
-| name   | string | nombre de la zona |
+| Campo       | Tipo   | Descripcion        |
+| ----------- | ------ | ------------------ |
+| partitionId | string | id de la particion |
+| zoneId      | string | id de la zona      |
+| name        | string | nombre de la zona  |
 
 ## Response Message
 

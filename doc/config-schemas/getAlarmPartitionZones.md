@@ -13,17 +13,16 @@ Obtener las zonas de una particion de alarma y su informacion
         "deviceData": {...},
         "configKey": "getAlarmPartitions",
         "value": "{
-            "number":1,
-            "systemId":"xxx-xxxx"
-        }"  // No necesita
+
+            "partitionId":"1"
+        }"
     }
 }
 ```
 
-| Campo    | Tipo   | Descripcion                |
-| -------- | ------ | -------------------------- |
-| number   | int    | numero de la particion     |
-| systemId | string | id interno de la particion |
+| Campo       | Tipo   | Descripcion        |
+| ----------- | ------ | ------------------ |
+| partitionId | string | id de la particion |
 
 ## Response Message
 

@@ -13,8 +13,7 @@ Activa alarma de Fuego Alarma o Panico
         "deviceData": {...},
         "configKey": "actionAlarmFapPartition",
         "value":{
-            "number":1,
-            "systemId": "xxx-xxxx",
+            "partitionId": "xxx-xxxx",
             "value":1
         }
     }
@@ -22,11 +21,10 @@ Activa alarma de Fuego Alarma o Panico
 
 ```
 
-| Campo    | Tipo   | Descripcion                          |
-| -------- | ------ | ------------------------------------ |
-| number   | int    | numero de particion                  |
-| systemId | string | Id de sistema de la particion        |
-| value    | int    | valor de FAP 1:fire, 2:alarm,3:panic |
+| Campo       | Tipo   | Descripcion                                                              |
+| ----------- | ------ | ------------------------------------------------------------------------ |
+| partitionId | string | Id de la particion                                                       |
+| value       | int    | valor de FAP Fire:1, Alarm:2, Panic:3, Assistance:4, Police:5, Medical:6 |
 
 ## Response Message
 

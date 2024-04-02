@@ -13,8 +13,7 @@ Desarma una particion
         "deviceData": {...},
         "configKey": "actionAlarmDisarmPartition",
         "value":{
-            "number":1,
-            "systemId": "xxx-xxxx",
+            "partitionId": "xxx-xxxx",
 
         }
     }
@@ -22,10 +21,9 @@ Desarma una particion
 
 ```
 
-| Campo    | Tipo   | Descripcion                   |
-| -------- | ------ | ----------------------------- |
-| number   | int    | numero de particion           |
-| systemId | string | Id de sistema de la particion |
+| Campo       | Tipo   | Descripcion        |
+| ----------- | ------ | ------------------ |
+| partitionId | string | Id de la particion |
 
 ## Response Message
 

@@ -13,7 +13,7 @@ Setea el nombre de una partición
         "deviceData": {...},
         "configKey": "setAlarmPartition",
         "value": {
-            "number": 1,
+            "partitionId": "1",
             "systemId": "xxxxx-xxxx",
             "name": "Perimetral Este"
         }
