@@ -348,3 +348,129 @@ type GetAllPeopleFromACResponseItem struct {
 }
 
 type GetAllPeopleFromACResponse []*GetAllPeopleFromACResponseItem
+
+type GetAlarmPartitionsResponseItem struct {
+	PartitionId  string `json:"partitionId"`
+	Name         string `json:"name"`
+	Enabled      bool   `json:"enabled"`
+	ArmedStatus  int    `json:"armedStatus"`
+	TroubleState int    `json:"troubleState"`
+	AlarmState   int    `json:"alarmState"`
+}
+
+type GetAlarmPartitionsResponse []*GetAlarmPartitionsResponseItem
+
+type SetAlarmPartitionRequest struct {
+	PartitionId string `json:"partitionId"`
+	Name        string `json:"name"`
+}
+
+type SetAlarmPartitionResponse error
+
+type GetAlarmZonesResponseItem struct {
+	ZoneId     string `json:"zoneId"`
+	Name       string `json:"name"`
+	AlarmState int    `json:"alarmState"`
+	Bypassed   bool   `json:"bypassed"`
+	OpenClosed bool   `json:"openClosed"`
+}
+
+type GetAlarmZonesResponse []*GetAlarmZonesResponseItem
+
+type SetAlarmZoneRequest struct {
+	PartitionId string `json:"partitionId"`
+	ZoneId      string `json:"zoneId"`
+	Name        string `json:"name"`
+}
+
+type SetAlarmZoneResponse error
+
+type GetAlarmZoneStatusRequest struct {
+	ZoneId      string `json:"zoneId"`
+	PartitionId string `json:"partitionId"`
+}
+
+type GetAlarmZoneStatusResponse struct {
+	AlarmState int  `json:"alarmState"`
+	Bypassed   bool `json:"bypassed"`
+	OpenClosed bool `json:"openClosed"`
+}
+
+type SetAddAlarmUserRequest struct {
+	PartitionId string `json:"partitionId"`
+	UserName    string `json:"userName"`
+	AccessCode  string `json:"accessCode"`
+}
+
+type SetAddAlarmUserResponse error
+
+type SetAlarmUserRequest struct {
+	UserId      string `json:"userId"`
+	PartitionId string `json:"partitionId"`
+	UserName    string `json:"userName"`
+	AccessCode  string `json:"accessCode"`
+}
+
+type SetAlarmUserResponse error
+
+type GetAlarmUsersResponseItem struct {
+	UserId      string `json:"userId"`
+	PartitionId string `json:"partitionId"`
+	UserName    string `json:"userName"`
+}
+
+type GetAlarmUsersResponse []*GetAlarmUsersResponseItem
+
+type GetAlarmArmStatesResponseItem struct {
+	ArmedStatus string `json:"armedStatus"`
+	Value       int    `json:"value"`
+}
+
+type GetAlarmArmStatesResponse []*GetAlarmArmStatesResponseItem
+
+type GetFAPStatesResponseItem struct {
+	FAPStatus string `json:"FAPStatus"`
+	Value     int    `json:"value"`
+}
+
+type GetAlarmFAPStatesResponse []*GetFAPStatesResponseItem
+
+type ActionAlarmArmPartitionRequest struct {
+	PartitionId string `json:"partitionId"`
+	Value       int    `json:"value"`
+}
+
+type ActionAlarmArmPartitionResponse error
+
+type ActionAlarmDisarmPartitionRequest struct {
+	PartitionId string `json:"partitionId"`
+}
+
+type ActionAlarmDisarmPartitionResponse error
+
+type ActionAlarmFAPPartitionRequest struct {
+	PartitionId string `json:"partitionId"`
+	Value       int    `json:"value"`
+}
+
+type ActionAlarmFAPPartitionResponse error
+
+type GetAlarmPartitionZonesRequest struct {
+	PartitionId string `json:"partitionId"`
+}
+
+type GetAlarmPartitionZonesResponse []*GetAlarmZonesResponseItem
+
+type SetAddAlarmPartitionZoneRequest struct {
+	PartitionId string `json:"partitionId"`
+	ZoneId      string `json:"zoneId"`
+}
+
+type SetAddAlarmPartitionZoneResponse error
+
+type SetDeleteAlarmPartitionZoneRequest struct {
+	PartitionId string `json:"partitionId"`
+	ZoneId      string `json:"zoneId"`
+}
+
+type SetDeleteAlarmPartitionZoneResponse error

@@ -150,3 +150,19 @@ Los marcados con * son obligatorios.
 | GET_FTP_INFO | GetFtpInfoRequest | GetFtpInfoResponse | Get ftp device config  |[Open](./doc/config-schemas/getFtpInfo.md) |
 | SET_FTP_INFO | SetFtpInfoRequest | SetFtpInfoResponse | Set ftp device config  |[Open](./doc/config-schemas/setFtpInfo.md) |
 | GET_ALL_PEOPLE_FROM_AC | GetAllPeopleFromACRequest | GetAllPeopleFromACResponse | Get all people from the access control |[Open](./doc/config-schemas/getAllPeopleFromAC.md) |
+| GET_ALARM_PARTITIONS | GetAlarmPartitionsRequest | GetAlarmPartitionsResponse | Get Alarm partitions |[Open](./doc/config-schemas/setFtpInfo.md) |
+| SET_ALARM_PARTITION | SetAlarmPartitionRequest | SetAlarmPartitionResponse | Set Alarm partition name |[Open](./doc/config-schemas/setAlarmPartition.md) |
+| GET_ALARM_ZONES | GetAlarmZonesRequest | GetAlarmZonesResponse|Get alarm zones |[Open](./doc/config-schemas/getAlarmZones.md) |
+| SET_ALARM_ZONE | SetAlarmZoneRequest | SetAlarmZoneResponse | Set Alarm zone name |[Open](./doc/config-schemas/setAlarmZone.md) |
+| GET_ALARM_ZONE_STATUS | GetAlarmZoneStatusRequest | GetAlarmZoneStatusResponse | Get the status of a zone |[Open](./doc/config-schemas/getAlarmZoneStatus.md) |
+| SET_ADD_ALARM_USER | SetAddAlarmUserRequest | SetAddAlarmUserResponse | Add an user to a partition |[Open](./doc/config-schemas/setAddAlarmUser.md) |
+| SET_ALARM_USER | SetAlarmUserRequest | SetAlarmUserResponse | Set an user of a partition |[Open](./doc/config-schemas/setAlarmUser.md) |
+| GET_ALARM_USERS | GetAlarmUsersRequest | GetAlarmUsersResponse | Get a list of users of an alarm |[Open](./doc/config-schemas/getAlarmUsers.md) |
+| GET_ALARM_ARM_STATES | GetAlarmArmStatesRequest | GetAlarmArmStatesResponse | Get a list of arm states avaliable |[Open](./doc/config-schemas/getAlarmArmStates.md) |
+| GET_ALARM_FAP_STATES | GetAlarmFAPStatesRequest | GetAlarmFAPStatesResponse | Get a list of Fire Alarm Panic states avaliable |[Open](./doc/config-schemas/getAlarmFAPStates.md) |
+| ACTION_ALARM_ARM_PARTITION | ActionAlarmArmPartitionRequest | ActionAlarmArmPartitionResponse | Arms an alarm partition with an arm value |[Open](./doc/config-schemas/actionAlarmArmPartition.md) |
+| ACTION_ALARM_DISARM_PARTITION | ActionAlarmDisarmPartitionRequest | ActionAlarmDisarmPartitionResponse | Disarms an alarm partition |[Open](./doc/config-schemas/actionAlarmDisarmPartition.md) |
+| ACTION_ALARM_FAP_PARTITION | ActionAlarmFAPPartitionRequest | ActionAlarmFAPPartitionResponse | activates fire, alarm,panic or another alarm |[Open](./doc/config-schemas/actionAlarmFAPPartition.md) |
+| GET_ALARM_PARTITION_ZONES | GetAlarmPartitionZonesRequest | GetAlarmPartitionZonesResponse | Get zones in a partition | |[Open](./doc/config-schemas/getAlarmPartitionZones.md) |
+| SET_ADD_ALARM_PARTITION_ZONE | SetAddAlarmPartitionZoneRequest | SetAddAlarmPartitionZoneResponse | Sets a zone to a partition |[Open](./doc/config-schemas/setAddAlarmPartitionZone.md) |
+| SET_DELETE_ALARM_PARTITION_ZONE | SetDeleteAlarmPartitionZoneRequest | SetDeleteAlarmPartitionZoneResponse | Deletes a zone from a partition |[Open](./doc/config-schemas/setDeleteAlarmPartitionZone.md) |
