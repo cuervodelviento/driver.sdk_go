@@ -457,3 +457,11 @@ type SetAddAlarmPartitionZoneRequest struct {
 }
 
 type SetAddAlarmPartitionZoneResponse error
+
+type SetDeleteAlarmPartitionZoneRequest struct {
+	Number     int    `json:"number"`
+	SystemId   string `json:"systemId"`
+	ZoneNumber int    `json:"zoneNumber"`
+}
+
+type SetDeleteAlarmPartitionZoneResponse error

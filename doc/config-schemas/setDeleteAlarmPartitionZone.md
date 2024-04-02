@@ -1,8 +1,8 @@
-# Adds a zone to a partition
+# Deletes a zone from a partition
 
 ## Descripcion
 
-Añade una zona a una particion
+Remueve una zona de una particion
 
 ## Request Message
 
@@ -11,7 +11,7 @@ Añade una zona a una particion
     ...
     "data": {
         "deviceData": {...},
-        "configKey": "setAddAlarmPartitionZone",
+        "configKey": "setDeleteAlarmPartitionZone",
         "value":{
             "number":1,
             "systemId": "xxx-xxxx",

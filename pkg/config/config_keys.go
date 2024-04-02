@@ -55,3 +55,4 @@ const ACTION_ALARM_DISARM_PARTITION NetsocsConfigKey = "actionAlarmDisarmPartiti
 const ACTION_ALARM_FAP_PARTITION NetsocsConfigKey = "actionAlarmFAPPartition"
 const GET_ALARM_PARTITION_ZONES NetsocsConfigKey = "getAlarmPartitionZones"
 const SET_ADD_ALARM_PARTITION_ZONE NetsocsConfigKey = "setAddAlarmPartitionZone"
+const SET_DELETE_ALARM_PARTITION_ZONE NetsocsConfigKey = "setDeleteAlarmPartitionZone"
