@@ -159,3 +159,6 @@ Los marcados con * son obligatorios.
 | GET_ALARM_USERS | GetAlarmUsersRequest | GetAlarmUsersResponse | Get a list of users of an alarm |[Open](./doc/config-schemas/getAlarmUsers.md) |
 | GET_ALARM_ARM_STATES | GetAlarmArmStatesRequest | GetAlarmArmStatesResponse | Get a list of arm states avaliable |[Open](./doc/config-schemas/getAlarmArmStates.md) |
 | GET_ALARM_FAP_STATES | GetAlarmFAPStatesRequest | GetAlarmFAPStatesResponse | Get a list of Fire Alarm Panic states avaliable |[Open](./doc/config-schemas/getAlarmFAPStates.md) |
+| ACTION_ALARM_ARM_PARTITION | ActionAlarmArmPartitionRequest | ActionAlarmArmPartitionResponse | Arms an alarm partition with an arm value |[Open](./doc/config-schemas/actionAlarmArmPartition.md) |
+| ACTION_ALARM_DISARM_PARTITION | ActionAlarmDisarmPartitionRequest | ActionAlarmDisarmPartitionResponse | Disarms an alarm partition |[Open](./doc/config-schemas/actionAlarmDisarmPartition.md) |
+| ACTION_ALARM_FAP_PARTITION | ActionAlarmFAPPartitionRequest | ActionAlarmFAPPartitionResponse | activates fire, alarm,panic or another alarm ||[Open](./doc/config-schemas/actionAlarmFAPPartition.md) |

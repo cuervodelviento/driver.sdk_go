@@ -1,8 +1,8 @@
-# Get storages config
+# Disarms a partition
 
 ## Descripcion
 
-Setea el nombre de una partición
+Desarma una particion
 
 ## Request Message
 
@@ -11,15 +11,21 @@ Setea el nombre de una partición
     ...
     "data": {
         "deviceData": {...},
-        "configKey": "setAlarmPartition",
-        "value": {
-            "number": 1,
-            "systemId": "xxxxx-xxxx",
-            "name": "Perimetral Este"
+        "configKey": "actionAlarmDisarmPartition",
+        "value":{
+            "number":1,
+            "systemId": "xxx-xxxx",
+
         }
     }
 }
+
 ```
+
+| Campo    | Tipo   | Descripcion                   |
+| -------- | ------ | ----------------------------- |
+| number   | int    | numero de particion           |
+| systemId | string | Id de sistema de la particion |
 
 ## Response Message
 

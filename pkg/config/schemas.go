@@ -419,3 +419,26 @@ type GetFAPStatesResponseItem struct {
 }
 
 type GetAlarmFAPStatesResponse []*GetFAPStatesResponseItem
+
+type ActionAlarmArmPartitionRequest struct {
+	Number   int    `json:"number"`
+	SystemId string `json:"systemId"`
+	Value    int    `json:"value"`
+}
+
+type ActionAlarmArmPartitionResponse error
+
+type ActionAlarmDisarmPartitionRequest struct {
+	Number   int    `json:"number"`
+	SystemId string `json:"systemId"`
+}
+
+type ActionAlarmDisarmPartitionResponse error
+
+type ActionAlarmFAPPartitionRequest struct {
+	Number   int    `json:"number"`
+	SystemId string `json:"systemId"`
+	Value    int    `json:"value"`
+}
+
+type ActionAlarmFAPPartitionResponse error
