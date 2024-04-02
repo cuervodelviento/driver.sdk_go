@@ -155,3 +155,4 @@ Los marcados con * son obligatorios.
 | SET_ALARM_ZONE | SetAlarmZoneRequest | SetAlarmZoneResponse | Set Alarm zone name |[Open](./doc/config-schemas/setAlarmZone.md) |
 | GET_ALARM_ZONE_STATUS | GetAlarmZoneStatusRequest | GetAlarmZoneStatusResponse | Get the status of a zone |[Open](./doc/config-schemas/getAlarmZoneStatus.md) |
 | SET_ADD_ALARM_USER | SetAddAlarmUserRequest | SetAddAlarmUserResponse | Add an user to a partition |[Open](./doc/config-schemas/setAddAlarmUser.md) |
+| SET_ALARM_USER | SetAlarmUserRequest | SetAlarmUserResponse | Set an user of a partition |[Open](./doc/config-schemas/setAlarmUser.md) |
