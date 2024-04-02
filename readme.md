@@ -149,6 +149,7 @@ Los marcados con * son obligatorios.
 | GET_CURRENT_VIDEO_RESOLUTION_BY_CHANNEL | GetCurrentVideoResolutionByChannelRequest | GetCurrentVideoResolutionByChannelResponse | Get the current video resolution of a channel |[Open](./doc/config-schemas/getCurrentVideoResolutionByChannel.md) |
 | GET_FTP_INFO | GetFtpInfoRequest | GetFtpInfoResponse | Get ftp device config  |[Open](./doc/config-schemas/getFtpInfo.md) |
 | SET_FTP_INFO | SetFtpInfoRequest | SetFtpInfoResponse | Set ftp device config  |[Open](./doc/config-schemas/setFtpInfo.md) |
+| GET_ALL_PEOPLE_FROM_AC | GetAllPeopleFromACRequest | GetAllPeopleFromACResponse | Get all people from the access control |[Open](./doc/config-schemas/getAllPeopleFromAC.md) |
 | GET_ALARM_PARTITIONS | GetAlarmPartitionsRequest | GetAlarmPartitionsResponse | Get Alarm partitions |[Open](./doc/config-schemas/setFtpInfo.md) |
 | SET_ALARM_PARTITION | SetAlarmPartitionRequest | SetAlarmPartitionResponse | Set Alarm partition name |[Open](./doc/config-schemas/setAlarmPartition.md) |
 | GET_ALARM_ZONES | GetAlarmZonesRequest | GetAlarmZonesResponse|Get alarm zones |[Open](./doc/config-schemas/getAlarmZones.md) |

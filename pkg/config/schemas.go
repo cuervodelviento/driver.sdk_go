@@ -334,6 +334,21 @@ type SetFtpInfoRequest struct {
 
 type SetFtpInfoResponse error
 
+type GetAllPeopleFromACRequest struct{}
+
+type GetAllPeopleFromACResponseItem struct {
+	PersonID              string `json:"personId"`
+	PersonName            string `json:"personName"`
+	TotalCards            int    `json:"totalCards"`
+	TotalFaces            int    `json:"totalFaces"`
+	TotalFingerprints     int    `json:"totalFingerprints"`
+	TotalIris             int    `json:"totalIris"`
+	TotalVoiceRecognition int    `json:"totalVoiceRecognition"`
+	TotalRFID             int    `json:"totalRFID"`
+}
+
+type GetAllPeopleFromACResponse []*GetAllPeopleFromACResponseItem
+
 type GetAlarmPartitionsResponseItem struct {
 	Number       int    `json:"number"`
 	SystemId     string `json:"systemId"`
