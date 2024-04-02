@@ -1,4 +1,4 @@
-# Get storages config
+# Get Alarm Arm states
 
 ## Descripcion
 
