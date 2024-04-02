@@ -11,7 +11,7 @@ Obtener lista de estados de armado disponibles
     ...
     "data": {
         "deviceData": {...},
-        "configKey": "getAlarmPartitions",
+        "configKey": "getAlarmArmStates",
         "value": "{}"  // No necesita
     }
 }

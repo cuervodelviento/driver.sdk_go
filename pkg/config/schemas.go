@@ -412,3 +412,10 @@ type GetAlarmArmStatesResponseItem struct {
 }
 
 type GetAlarmArmStatesResponse []*GetAlarmArmStatesResponseItem
+
+type GetFAPStatesResponseItem struct {
+	FAPStatus string `json:"FAPStatus"`
+	Value     int    `json:"value"`
+}
+
+type GetAlarmFAPStatesResponse []*GetFAPStatesResponseItem
