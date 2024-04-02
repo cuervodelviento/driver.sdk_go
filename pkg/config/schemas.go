@@ -395,3 +395,13 @@ type SetAlarmUserRequest struct {
 	UserName   string `json:"userName"`
 	AccessCode string `json:"accessCode"`
 }
+
+type SetAlarmUserResponse error
+
+type GetAlarmUsersResponseItem struct {
+	UserId   string `json:"userId"`
+	SystemId string `json:"systemId"`
+	UserName string `json:"userName"`
+}
+
+type GetAlarmUsersResponse []*GetAlarmUsersResponseItem
