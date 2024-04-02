@@ -1,8 +1,8 @@
-# Arms a partition
+# Activates a FAP Alarm
 
 ## Descripcion
 
-Arma una particion con un valor de armado
+Activa alarma de Fuego Alarma o Panico
 
 ## Request Message
 
