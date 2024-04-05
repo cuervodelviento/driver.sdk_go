@@ -58,10 +58,24 @@ type SetAddPersonToACRequest struct {
 
 type SetAddPersonToACResponse error
 
+type CardItem struct {
+	CardValue string `json:"cardValue"`
+	CardType  string `json:"cardType"`
+}
+
 // https://github.com/Netsocs-Team/DevDocs/blob/main/markdown/drivers/config-schemas/setCardToPersonAC.md
 type SetCardToPersonACRequest struct {
-	PersonID string   `json:"personId"`
-	Cards    []string `json:"cards"`
+	PersonID string     `json:"personId"`
+	Cards    []CardItem `json:"cards"`
+}
+
+type CardTypeItem struct {
+	CardType  string `json:"cardType"`
+	ValueType string `json:"valueType"`
+}
+
+type GetSupportedCardTypesResponse struct {
+	CardTypes []CardTypeItem `json:"cardTypes"`
 }
 
 type SetCardToPersonACResponse error

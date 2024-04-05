@@ -144,6 +144,7 @@ Los marcados con * son obligatorios.
 | GET_MIRROR_VIDEO_STATUS | GetMirrorVideoStatusRequest | GetMirrorVideoStatusResponse | Get the mirror video status of the device | [Open](./doc/config-schemas/getMirrorVideoStatusResponse.md) |
 | GET_RECORDING_SOURCE | GetRecordingSourceRequest | GetRecordingSourceResponse | Get the recording source of the device | MISSING |
 | GET_STORAGES | GetStoragesRequest | GetStoragesResponse | Get the storages of the device | [Open](./doc/config-schemas/getStorages.md) |
+| GET_SUPPORTED_CARD_TYPES | GetSupportedCardTypesRequest | GetSupportedCardTypesResponse | Get the supported card types of the device | [Open](./doc/config-schemas/getSupportedCardTypes.md) |
 | GET_USERS | GetUsersRequest | GetUsersResponse | Get the users of the device | [Open](./doc/config-schemas/getUsers.md) |
 | GET_VIDEO_IN_BLACK_AND_WHITE_STATUS | GetVideoInBlackAndWhiteStatusRequest | GetVideoInBlackAndWhiteStatusResponse | Get the video in black and white status of the device | [Open](./doc/config-schemas/getVideoInBlackAndWhiteStatus.md) |
 | SET_ADD_ALARM_PARTITION_ZONE | SetAddAlarmPartitionZoneRequest | SetAddAlarmPartitionZoneResponse | Sets a zone to a partition |[Open](./doc/config-schemas/setAddAlarmPartitionZone.md) |

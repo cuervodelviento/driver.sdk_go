@@ -1,6 +1,5 @@
 # Set Card to Person AC
 
-
 ## Descripcion
 
 Agregar tarjeta(s) a una persona en un control de acceso
@@ -15,15 +14,23 @@ Agregar tarjeta(s) a una persona en un control de acceso
         "configKey": "setCardToPersonAC",
         "value":{
             "personId": "string",
-            "cards": ["string"],
-        } // no needed
+            "cards": [
+                {
+                    "cardValue":"23118291915511151",
+                    "cardType":"QR",
+                },
+                {
+                    "cardValue":"9181283181851",
+                    "cardType":"MIFARE_1K",
+                }
+            ],
+        }
     }
 }
 ```
 
-
-
 ## Response Message
+
 ```json
 {
     ...,
@@ -34,7 +41,7 @@ Agregar tarjeta(s) a una persona en un control de acceso
 }
 ```
 
-| Campo | Tipo | Descripcion |
-| --- | --- | --- |
-| error | boolean | Error |
-| msg | string | Mensaje de error o log interno|
+| Campo | Tipo    | Descripcion                    |
+| ----- | ------- | ------------------------------ |
+| error | boolean | Error                          |
+| msg   | string  | Mensaje de error o log interno |
