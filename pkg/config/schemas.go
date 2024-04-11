@@ -73,6 +73,30 @@ type SetCardToPersonACRequest struct {
 	Cards    []string `json:"cards"`
 }
 
+type SetCardMifare1KToPersonACResponse error
+type SetCardMifare1KToPersonACRequest struct {
+	PersonID string   `json:"personId"`
+	Cards    []string `json:"cards"`
+}
+
+type SetCardMifare4KToPersonACResponse error
+type SetCardMifare4KToPersonACRequest struct {
+	PersonID string   `json:"personId"`
+	Cards    []string `json:"cards"`
+}
+
+type SetCardMifareDesfireToPersonACResponse error
+type SetCardMifareDesfireToPersonACRequest struct {
+	PersonID string   `json:"personId"`
+	Cards    []string `json:"cards"`
+}
+
+type SetCardProxToPersonACResponse error
+type SetCardProxToPersonACRequest struct {
+	PersonID string   `json:"personId"`
+	Cards    []string `json:"cards"`
+}
+
 type SetQRToPersonACResponse error
 
 type SetQRToPersonACRequest struct {

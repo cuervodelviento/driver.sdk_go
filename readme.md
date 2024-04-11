@@ -156,6 +156,10 @@ Los marcados con * son obligatorios.
 | SET_ALARM_ZONE | SetAlarmZoneRequest | SetAlarmZoneResponse | Set Alarm zone name |[Open](./doc/config-schemas/setAlarmZone.md) |
 | SET_BLOCK_PERSON_TO_AC | SetBlockPersonToACRequest | SetBlockPersonToACResponse | Block a person in the access control | [Open](./doc/config-schemas/setBlockPersonToAC.md) |
 | SET_CARD_TO_PERSON_AC | SetCardToPersonACRequest | SetCardToPersonACResponse | Set a card to a person in the access control | [Open](./doc/config-schemas/setCardToPersonAC.md) |
+| SET_CARD_MIFARE_1K_TO_PERSON_AC | SetCardMifare1KToPersonACRequest | SetCardMifare1KToPersonACResponse | Set a smart card to a person in the access control | [Open](./doc/config-schemas/setCardMifare1KToPersonAC.md) |
+| SET_CARD_MIFARE_4K_TO_PERSON_AC | SetCardMifare4KToPersonACRequest | SetCardMifare4KToPersonACResponse | Set a smart card to a person in the access control | [Open](./doc/config-schemas/setCardMifare4KToPersonAC.md) |
+| SET_CARD_MIFARE_DESFIRE_TO_PERSON_AC | SetCardMifareDesfireToPersonACRequest | SetCardMifareDesfireToPersonACResponse | Set a smart card to a person in the access control | [Open](./doc/config-schemas/setCardMifareDesfireToPersonAC.md) |
+| SET_CARD_PROX_TO_PERSON_AC | SetCardProxToPersonACRequest | SetCardProxToPersonACResponse | Set a smart card to a person in the access control | [Open](./doc/config-schemas/setCardProxToPersonAC.md) |
 | SET_QR_TO_PERSON_AC | SetQRToPersonACRequest | SetQRToPersonACResponse | Set a qr code to a person in the access control | [Open](./doc/config-schemas/setQRToPersonAC.md) |
 | SET_DEL_PERSON_TO_AC | SetDelPersonToACRequest | SetDelPersonToACResponse | Delete a person from the access control | [Open](./doc/config-schemas/setDelPersonToAC.md) |
 | SET_DELETE_ALARM_PARTITION_ZONE | SetDeleteAlarmPartitionZoneRequest | SetDeleteAlarmPartitionZoneResponse | Deletes a zone from a partition |[Open](./doc/config-schemas/setDeleteAlarmPartitionZone.md) |
