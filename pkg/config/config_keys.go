@@ -2,7 +2,6 @@ package config
 
 type NetsocsConfigKey string
 
-
 const ACTION_ALARM_ARM_PARTITION NetsocsConfigKey = "actionAlarmArmPartition"
 const ACTION_ALARM_DISARM_PARTITION NetsocsConfigKey = "actionAlarmDisarmPartition"
 const ACTION_ALARM_FAP_PARTITION NetsocsConfigKey = "actionAlarmFAPPartition"
@@ -47,6 +46,7 @@ const SET_ALARM_USER NetsocsConfigKey = "setAlarmUser"
 const SET_ALARM_ZONE NetsocsConfigKey = "setAlarmZone"
 const SET_BLOCK_PERSON_TO_AC NetsocsConfigKey = "setBlockPersonToAC"
 const SET_CARD_TO_PERSON_AC NetsocsConfigKey = "setCardToPersonAC"
+const SET_QR_TO_PERSON_AC NetsocsConfigKey = "setQRToPersonAC"
 const SET_DEL_PERSON_TO_AC NetsocsConfigKey = "setDelPersonToAC"
 const SET_DELETE_ALARM_PARTITION_ZONE NetsocsConfigKey = "setDeleteAlarmPartitionZone"
 const SET_DELETE_STORAGE NetsocsConfigKey = "setDeleteStorage"

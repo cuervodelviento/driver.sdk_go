@@ -73,6 +73,13 @@ type SetCardToPersonACRequest struct {
 	Cards    []string `json:"cards"`
 }
 
+type SetQRToPersonACResponse error
+
+type SetQRToPersonACRequest struct {
+	PersonID string   `json:"personId"`
+	QRs      []string `json:"qrs"`
+}
+
 type SetCardToPersonACResponse error
 
 // https://github.com/Netsocs-Team/DevDocs/blob/main/markdown/drivers/config-schemas/setFaceToPersonAC.md
