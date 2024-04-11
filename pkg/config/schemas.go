@@ -1,16 +1,13 @@
 package config
 
-// https://github.com/Netsocs-Team/DevDocs/blob/main/markdown/drivers/config-schemas/getChannels.md
 type GetChannelResponseItem struct {
 	ChannelNumber int    `json:"channelNumber"`
 	ChannelName   string `json:"name"`
 	Source        string `json:"rtspSource"`
 }
 
-// https://github.com/Netsocs-Team/DevDocs/blob/main/markdown/drivers/config-schemas/getChannels.md
 type GetChannelResponse []*GetChannelResponseItem
 
-// https://github.com/Netsocs-Team/DevDocs/blob/main/markdown/drivers/config-schemas/setUsers.md
 type SetUserRequest struct {
 	ID           string `json:"id"`
 	Username     string `json:"username"`
@@ -18,21 +15,15 @@ type SetUserRequest struct {
 	NewPassword  string `json:"new_password"`
 }
 
-// https://github.com/Netsocs-Team/DevDocs/blob/main/markdown/drivers/config-schemas/setUsers.md
 type SetUserResponse error
 
-// https://github.com/Netsocs-Team/DevDocs/blob/main/markdown/drivers/config-schemas/deleteUser.md
 type DeleteUserRequest struct {
 	ID int `json:"id"`
 }
 
-// https://github.com/Netsocs-Team/DevDocs/blob/main/markdown/drivers/config-schemas/deleteUser.md
 type DeleteUserResponse error
 
-// https://github.com/Netsocs-Team/DevDocs/blob/main/markdown/drivers/config-schemas/getUsers.md
 type GetUserRequest struct{}
-
-// https://github.com/Netsocs-Team/DevDocs/blob/main/markdown/drivers/config-schemas/getUsers.md
 
 type GetUserResponseItem struct {
 	ID       string `json:"id"`
@@ -59,7 +50,6 @@ type GetSupportedCardTypesResponse struct {
 	CardTypes []CardTypeItem `json:"cardTypes"`
 }
 
-// https://github.com/Netsocs-Team/DevDocs/blob/main/markdown/drivers/config-schemas/setAddPersonToAC.md
 type SetAddPersonToACRequest struct {
 	PersonID   string `json:"personId"`
 	PersonName string `json:"personName"`
@@ -67,7 +57,6 @@ type SetAddPersonToACRequest struct {
 
 type SetAddPersonToACResponse error
 
-// https://github.com/Netsocs-Team/DevDocs/blob/main/markdown/drivers/config-schemas/setCardToPersonAC.md
 type SetCardToPersonACRequest struct {
 	PersonID string   `json:"personId"`
 	Cards    []string `json:"cards"`
@@ -106,7 +95,6 @@ type SetQRToPersonACRequest struct {
 
 type SetCardToPersonACResponse error
 
-// https://github.com/Netsocs-Team/DevDocs/blob/main/markdown/drivers/config-schemas/setFaceToPersonAC.md
 type SetFaceToPersonACRequest struct {
 	PersonID string   `json:"personId"`
 	Faces    []string `json:"faces"`
@@ -114,15 +102,11 @@ type SetFaceToPersonACRequest struct {
 
 type SetFaceToPersonACResponse error
 
-// https://github.com/Netsocs-Team/DevDocs/blob/main/markdown/drivers/config-schemas/setDelPersonToAC.md
-
 type SetDelToPersonToACRequest struct {
 	PersonID string `json:"personId"`
 }
 
 type SetDelToPersonToACResponse error
-
-// https://github.com/Netsocs-Team/DevDocs/blob/main/markdown/drivers/config-schemas/getAdminUser.md
 
 type GetAdminUserRequest struct{}
 
@@ -337,7 +321,6 @@ type GetInputsResponseItem struct {
 	Type        int    `json:"type"`
 }
 
-// https://github.com/Netsocs-Team/DevDocs/blob/main/markdown/drivers/config-schemas/getChannels.md
 type GetInputsResponse []*GetInputsResponseItem
 
 type GetMicrophoneResponseItem struct {
