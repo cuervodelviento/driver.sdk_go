@@ -2,7 +2,6 @@ package config
 
 type NetsocsConfigKey string
 
-
 const ACTION_ALARM_ARM_PARTITION NetsocsConfigKey = "actionAlarmArmPartition"
 const ACTION_ALARM_DISARM_PARTITION NetsocsConfigKey = "actionAlarmDisarmPartition"
 const ACTION_ALARM_FAP_PARTITION NetsocsConfigKey = "actionAlarmFAPPartition"
@@ -57,3 +56,4 @@ const SET_MIRROR_VIDEO NetsocsConfigKey = "setMirrorVideo"
 const SET_USERS NetsocsConfigKey = "setUsers"
 const SET_VIDEO_IN_BLACK_AND_WHITE NetsocsConfigKey = "setVideoInBlackAndWhite"
 const SET_VIDEO_RESOLUTION NetsocsConfigKey = "setVideoResolution"
+const SET_QR_TO_PERSON_AC NetsocsConfigKey = "setQRToPersonAC"

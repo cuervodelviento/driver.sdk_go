@@ -169,32 +169,6 @@ type GetStorageResponseItem struct {
 	Status     int    `json:"status"`
 }
 
-// type SetAdminUserRequest struct {
-// 	ID           string `json:"id"`
-// 	Username     string `json:"username"`
-// 	PrevPassword string `json:"prevPassword"`
-// 	NewPassword  string `json:"newPassword"`
-// }
-
-// type SetAdminUserResponse error
-
-// type GetAdminUsersRequest struct{}
-
-// type GetAdminUsersResponse []*GetAdminUsersResponseItem
-// type GetAdminUsersResponseItem struct {
-// 	ID       string `json:"id"`
-// 	Username string `json:"username"`
-// 	// 0: Online, 1: Offline, 2: Unknown
-// 	Status int `json:"status"`
-// 	// Created at in format ISO 8601
-// 	CreatedAt *string `json:"created_at"`
-// 	// Last login in format ISO 8601
-// 	LastLogin *string `json:"last_login"`
-// 	// Last logout in format ISO 8601
-// 	LastLogout *string `json:"last_logout"`
-// 	LastIP     *string `json:"last_ip"`
-// }
-
 type GetCurrentVideoResolutionByChannelRequest struct {
 	ChannelNumber int `json:"channelNumber"`
 }
@@ -474,3 +448,21 @@ type SetDeleteAlarmPartitionZoneRequest struct {
 }
 
 type SetDeleteAlarmPartitionZoneResponse error
+
+type SetQRToPersonACRequest struct {
+	PersonID string                         `json:"personId"`
+	QRCodes  []SetQRToPersonACRequestQRCode `json:"qrcodes"`
+}
+
+type SetQRToPersonACRequestQRCode struct {
+	Value string `json:"value"`
+	Type  QRType `json:"type"`
+}
+
+type QRType int16
+
+const (
+	QR_DEFAULT QRType = 50
+)
+
+type SetQRToPersonACResponse error

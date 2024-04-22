@@ -166,3 +166,4 @@ Los marcados con * son obligatorios.
 | SET_USERS | SetUsersRequest | SetUsersResponse | Set the users of the device | [Open](./doc/config-schemas/setUsers.md) |
 | SET_VIDEO_IN_BLACK_AND_WHITE | SetVideoInBlackAndWhiteRequest | SetVideoInBlackAndWhiteResponse | Set the video in black and white of the device | [Open](./doc/config-schemas/setVideoInBlackAndWhite.md) |
 | SET_VIDEO_RESOLUTION | SetVideoResolutionRequest | SetVideoResolutionResponse | Set the video resolution of the device | [Open](./doc/config-schemas/setVideoResolution.md) |
+| SET_QR_TO_PERSON_AC | SetQRToPersonACRequest | SetQRToPersonACResponse | Set a QR to a person in the access control | [Open](./doc/config-schemas/setQRToPersonAC.md) |

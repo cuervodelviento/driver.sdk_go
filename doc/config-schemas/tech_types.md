@@ -23,14 +23,14 @@
 | 15               | Huella Dactilar ZK             | Lectura de huella dactilar con equipos ZKSoftware             | Y        | N                |                      | 0             | N            |
 | 16               | Banda Magnetica TITSA          | Lectura de Banda Magnetica TITSA                              | N        | N                |                      | 0             | N            |
 | 17               | Carné Universitario US         | Lectura del chip según especificación de la Universidad de Sev | Y        | N                |                      | 0             | N            |
-| 18               | RF-125KHz Qontinuum            | Lectura de 2 bytes de menor peso y se expresan en decimal |  de 00 | N        | N                |                      | 0             | N            |
+| 18               | RF-125KHz Qontinuum            | Lectura de 2 bytes de menor peso y se expresan en decimal,  de 00 | N        | N                |                      | 0             | N            |
 | 19               | Pin Alternativo ZK             | Pin leido en los lectores de huella ZK Software en sustitución | Y        | N                |                      | 0             | N            |
 | 20               | RF-PAXTON                      | Lectura de tarjetas RF de Paxton                              | Y        | Y                |                      | 0             | N            |
 | 22               | RF Decimal                     | Lectura de tarjetas RF sin sitecode.El número se entrega en dec | N        | N                |                      | 0             | N            |
-| 23               | Salto                          | ROM Code de las tarjetas Salto |  independiente del tipo de tarjet | N        | N                |                      | 0             | N            |
+| 23               | Salto                          | ROM Code de las tarjetas Salto,  independiente del tipo de tarjet | N        | N                |                      | 0             | N            |
 | 28               | Wiegand D                      | Lectura de tarjetas con formato D                             | N        | N                |                      | 0             | N            |
 | 29               | Huella Dactilar Suprema        | Lectura de huella dactilar con equipos Suprema                | Y        | Y                | HUELLA               | 0             | N            |
-| 31               | Wiegand Decimal                | Lector wiegand |  se lee el N/S en decimal y con restricción de s | N        | N                |                      | 0
+| 31               | Wiegand Decimal, Lector wiegand |  se lee el N/S en decimal y con restricción de s | N        | N                |                      | 0
 36 | Reconocimiento Facial Suprema | Reconocimiento de rostro con tecnologí­a Suprema | Y | Y | FACIAL | 0 | N
 37 | IdentificaciÃ³n App | Código configurado en la App para fichaje identificación y co" | N | N | "" | 0 | Y
 38 | Iris ID | Reconocimiento de Iris del fabricante IrisID | Y | N | "" | 0 | N
