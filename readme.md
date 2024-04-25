@@ -153,6 +153,7 @@ Los marcados con * son obligatorios.
 | SET_ALARM_PARTITION | SetAlarmPartitionRequest | SetAlarmPartitionResponse | Set Alarm partition name |[Open](./doc/config-schemas/setAlarmPartition.md) |
 | SET_ALARM_USER | SetAlarmUserRequest | SetAlarmUserResponse | Set an user of a partition |[Open](./doc/config-schemas/setAlarmUser.md) |
 | SET_ALARM_ZONE | SetAlarmZoneRequest | SetAlarmZoneResponse | Set Alarm zone name |[Open](./doc/config-schemas/setAlarmZone.md) |
+| SET_ALARM_PARTITION_ZONE_BYPASSS | SetAlarmPartitionZoneBypassRequest | SetAlarmPartitionZoneBypassResponse | Set the bypass status of a zone for a partition |[Open](./doc/config-schemas/setAlarmPartitionZoneBypass.md) |
 | SET_BLOCK_PERSON_TO_AC | SetBlockPersonToACRequest | SetBlockPersonToACResponse | Block a person in the access control | [Open](./doc/config-schemas/setBlockPersonToAC.md) |
 | SET_CARD_TO_PERSON_AC | SetCardToPersonACRequest | SetCardToPersonACResponse | Set a card to a person in the access control | [Open](./doc/config-schemas/setCardToPersonAC.md) |
 | SET_DEL_PERSON_TO_AC | SetDelPersonToACRequest | SetDelPersonToACResponse | Delete a person from the access control | [Open](./doc/config-schemas/setDelPersonToAC.md) |

@@ -359,6 +359,14 @@ type SetAlarmZoneRequest struct {
 
 type SetAlarmZoneResponse error
 
+type SetAlarmPartitionZoneBypassRequest struct {
+	PartitionId string `json:"partitionId"`
+	ZoneId      string `json:"zoneId"`
+	Bypass      bool   `json:"bypass"`
+}
+
+type SetAlarmPartitionZoneBypassResponse error
+
 type GetAlarmZoneStatusRequest struct {
 	ZoneId      string `json:"zoneId"`
 	PartitionId string `json:"partitionId"`
