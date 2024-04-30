@@ -20,7 +20,7 @@ type Dispatcher struct {
 	videoURL      *string
 }
 
-func NewDispatcher(driverKey string, deviceId int) *Dispatcher {
+func NewDispatcher(driverHubHost string, driverKey string, deviceId int) *Dispatcher {
 	return &Dispatcher{
 		DriverKey: driverKey,
 		// Default values
@@ -77,6 +77,14 @@ func (e *Dispatcher) DispatchAndResetFields(eventKey string) error {
 	buff += buff[:len(buff)-1] + "}"
 	body := []byte(buff)
 	_, err := http.Post(fmt.Sprintf("http://%s:%d/v1/topologia/misc/%s", e.Host, e.Port, eventKey), "application/json", bytes.NewReader(body))
+
+	// Reset fields
+	e.imageURL = nil
+	e.originalValue = nil
+	e.channelNumber = nil
+	e.personId = nil
+	e.videoURL = nil
+
 	return err
 
 }
