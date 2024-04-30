@@ -74,7 +74,7 @@ func (e *Dispatcher) DispatchAndResetFields(eventKey string) error {
 	if e.videoURL != nil {
 		buff += "\"eventVideoUrl\": \"" + *e.videoURL + "\","
 	}
-	buff += buff[:len(buff)-1] + "}"
+	buff = buff[:len(buff)-1] + "}"
 	body := []byte(buff)
 	_, err := http.Post(fmt.Sprintf("http://%s:%d/v1/topologia/misc/%s", e.Host, e.Port, eventKey), "application/json", bytes.NewReader(body))
 
