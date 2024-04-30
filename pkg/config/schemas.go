@@ -474,3 +474,9 @@ const (
 )
 
 type SetQRToPersonACResponse error
+
+type SetBackgroundImageRequest struct {
+	ImageURL string `json:"imageUrl"`
+}
+
+type SetBackgroundImageResponse error
