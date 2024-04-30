@@ -4,9 +4,11 @@ import (
 	"bytes"
 	"fmt"
 	"net/http"
+	"os"
 	"strconv"
 )
 
+// Deprecated: Use `Dispatcher` instead.
 type EventDispatcher struct {
 	host string
 	port int
@@ -84,6 +86,11 @@ func (e *EventDispatcher) DispatchWithPersonID(eventKey string, deviceID int, pe
 	bodyReader := bytes.NewReader(body)
 	_, err = http.Post(fmt.Sprintf("http://%s:%d/v1/topologia/misc/%s", e.host, e.port, eventKey), "application/json",
 		bodyReader)
+	return err
+}
+
+func (e *EventDispatcher) DispatchWithFile(eventKey string, deviceID int, file os.File) error {
+	_, err := http.Post(fmt.Sprintf("http://%s:%d/v1/topologia/misc/%s", e.host, e.port, eventKey), "application/json", &file)
 	return err
 }
 
