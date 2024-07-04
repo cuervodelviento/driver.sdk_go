@@ -480,3 +480,21 @@ type SetBackgroundImageRequest struct {
 }
 
 type SetBackgroundImageResponse error
+
+type SetActionUnlockDeviceRequest struct {
+	DeviceID      string `json:"deviceId"`
+	Unlock        bool   `json:"unlock"`
+	UnlockCode    string `json:"unlockCode"`
+	UnlockMode    string `json:"unlockMode"`
+	AditionalData string `json:"aditionalData"`
+}
+
+type SetActionUnlockDeviceResponse error
+
+type GetUnlockDeviceStatusRequest struct {
+	DeviceID string `json:"deviceId"`
+}
+
+type GetUnlockDeviceStatusResponse struct {
+	UnlockStatus string `json:"unlockStatus"`
+}

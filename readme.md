@@ -169,3 +169,5 @@ Los marcados con * son obligatorios.
 | SET_VIDEO_RESOLUTION | SetVideoResolutionRequest | SetVideoResolutionResponse | Set the video resolution of the device | [Open](./doc/config-schemas/setVideoResolution.md) |
 | SET_QR_TO_PERSON_AC | SetQRToPersonACRequest | SetQRToPersonACResponse | Set a QR to a person in the access control | [Open](./doc/config-schemas/setQRToPersonAC.md) |
 | SET_BACKGROUND_IMAGE | SetBackgroundImageRequest | SetBackgroundImageResponse | Set background image | [Open](./doc/config-schemas/setBackgroundImage.md) |
+| SET_ACTION_UNLOCK_DEVICE | SetActionUnlockDeviceRequest | SetActionUnlockDeviceResponse | Unlock the device | [Open](./doc/config-schemas/setActionUnlockDevice.md) |
+| GET_UNLOCK_DEVICE_STATUS | GetUnlockDeviceStatusRequest | GetUnlockDeviceStatusResponse | Get the unlock device status | [Open](./doc/config-schemas/getUnlockDeviceStatus.md) |
