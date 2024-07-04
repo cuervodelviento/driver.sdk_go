@@ -498,3 +498,20 @@ type GetUnlockDeviceStatusRequest struct {
 type GetUnlockDeviceStatusResponse struct {
 	UnlockStatus string `json:"unlockStatus"`
 }
+
+type GetSubdevicesRequest struct{}
+
+type GetSubdevicesResponseItem struct {
+	IDBrand          int    `json:"id_brand"`
+	IDModel          int    `json:"id_model"`
+	IDManufacturer   int    `json:"id_manufacturer"`
+	IDSubSystem      int    `json:"id_sub_system"`
+	IDDeviceGroup    int    `json:"id_device_group"`
+	ChildID          string `json:"child_id"`
+	ChildName        string `json:"child_name"`
+	ChildDescription string `json:"child_description"`
+	ChildIP          string `json:"child_ip"`
+	ChildPort        int    `json:"child_port"`
+}
+
+type GetSubdevicesResponse []GetSubdevicesResponseItem
