@@ -96,14 +96,27 @@ type GetAdminUserResponseItem struct {
 }
 
 type GetRecordingSourceRequest struct {
-	ChannelNumber int     `json:"channelNumber"`
-	UTCStart      string  `json:"utcStart"`
-	UTCEnd        *string `json:"utcEnd"`
+	ChannelId string  `json:"channelId"`
+	UTCStart  string  `json:"utcStart"`
+	UTCEnd    *string `json:"utcEnd"`
 }
 
 type GetRecordingSourceResponse struct {
 	Source string `json:"source"`
 }
+
+type GetRecordingRangesRequest struct {
+	ChannelId string  `json:"channelId"`
+	UTCStart  *string `json:"utcStart"`
+	UTCEnd    *string `json:"utcEnd"`
+}
+
+type RecordingRangeItem struct {
+	UTCStart string `json:"utcStart"`
+	UTCEnd   string `json:"utcEnd"`
+}
+
+type GetRecordingRangesResponse []*RecordingRangeItem
 
 type ZoomDirection int
 
