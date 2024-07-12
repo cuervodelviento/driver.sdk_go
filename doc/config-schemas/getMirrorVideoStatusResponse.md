@@ -1,6 +1,5 @@
 # Get Mirror Video Status
 
-
 ## Descripcion
 
 Obtener el estado del efecto de espejo de la imagen del video
@@ -14,19 +13,18 @@ Obtener el estado del efecto de espejo de la imagen del video
         "deviceData": {...},
         "configKey": "setMirrorVideoStatus",
         "value":{
-            "channelNumber": 1
-        } 
+            "channelNumber": "111-aaa"
+        }
     }
 }
 ```
 
-| Campo | Tipo | Descripcion |
-| --- | --- | --- |
-| channelNumber | int | Numero de canal de video |
-
-
+| Campo         | Tipo   | Descripcion           |
+| ------------- | ------ | --------------------- |
+| channelNumber | string | Id del canal de video |
 
 ## Response Message
+
 ```json
 {
     ...,
@@ -36,6 +34,6 @@ Obtener el estado del efecto de espejo de la imagen del video
 }
 ```
 
-| Campo | Tipo | Descripcion |
-| --- | --- | --- |
+| Campo   | Tipo    | Descripcion                 |
+| ------- | ------- | --------------------------- |
 | enabled | boolean | Estado del efecto de espejo |
