@@ -13,18 +13,19 @@ Obtener todas las resoluciones de video disponibles en el dispositivo
         "deviceData": {...},
         "configKey": "getAvailableVideoResolutions",
         "value": {
-            "channelId": "111-aaa"
+            "channelNumber": 0
         }
     }
 }
 ```
 
-| Campo     | Tipo   | Descripcion |
-| --------- | ------ | ----------- |
-| channelId | string | Id de canal |
+| Campo | Tipo | Descripcion |
+| --- | --- | --- |
+| channelNumber | int | Numero de canal |
+
+
 
 ## Response Message
-
 ```json
 {
     ...,
@@ -38,6 +39,8 @@ Obtener todas las resoluciones de video disponibles en el dispositivo
 }
 ```
 
-| Campo       | Tipo     | Descripcion                       |
-| ----------- | -------- | --------------------------------- |
+
+
+| Campo | Tipo | Descripcion |
+| --- | --- | --- |
 | resolutions | []string | Lista de resoluciones disponibles |

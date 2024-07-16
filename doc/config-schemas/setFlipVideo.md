@@ -1,5 +1,6 @@
 # Set Flip Video
 
+
 ## Descripcion
 
 Aplicar un efecto de volteo (vertical) a la imagen del video
@@ -14,20 +15,21 @@ Aplicar un efecto de volteo (vertical) a la imagen del video
         "configKey": "setFlipVideo",
         "value":{
             "enabled": true,
-            "channelId": "111-aaa"
+            "channelNumber": 1
 
-        }
+        } 
     }
 }
 ```
 
-| Campo     | Tipo    | Descripcion                                  |
-| --------- | ------- | -------------------------------------------- |
-| enabled   | boolean | Habilitar o deshabilitar el efecto de espejo |
-| channelId | string  | Id del canal de video                        |
+| Campo | Tipo | Descripcion |
+| --- | --- | --- |
+| enabled | boolean | Habilitar o deshabilitar el efecto de espejo |
+| channelNumber | int | Numero de canal de video |
+
+
 
 ## Response Message
-
 ```json
 {
     ...,
@@ -38,7 +40,7 @@ Aplicar un efecto de volteo (vertical) a la imagen del video
 }
 ```
 
-| Campo | Tipo    | Descripcion                    |
-| ----- | ------- | ------------------------------ |
-| error | boolean | Error al hacer backup          |
-| msg   | string  | Mensaje de error o log interno |
+| Campo | Tipo | Descripcion |
+| --- | --- | --- |
+| error | boolean | Error al hacer backup |
+| msg | string | Mensaje de error o log interno|

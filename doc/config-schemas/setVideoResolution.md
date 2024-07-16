@@ -13,20 +13,21 @@ Establecer la resolucion de video para un canal
         "deviceData": {...},
         "configKey": "setVideoResolution",
         "value": {
-            "channelId": "111-aaa",
+            "channelNumber": 0,
             "resolution": "1920x1080"
         }
     }
 }
 ```
 
-| Campo      | Tipo   | Descripcion         |
-| ---------- | ------ | ------------------- |
-| channelId  | string | Id del canal        |
+| Campo | Tipo | Descripcion |
+| --- | --- | --- |
+| channelNumber | int | Numero de canal |
 | resolution | string | Resolucion de video |
 
-## Response Message
 
+
+## Response Message
 ```json
 {
     ...,
@@ -37,7 +38,7 @@ Establecer la resolucion de video para un canal
 }
 ```
 
-| Campo | Tipo    | Descripcion                    |
-| ----- | ------- | ------------------------------ |
-| error | boolean | Error al actualizar            |
-| msg   | string  | Mensaje de error o log interno |
+| Campo | Tipo | Descripcion |
+| --- | --- | --- |
+| error | boolean | Error al actualizar |
+| msg | string | Mensaje de error o log interno|
