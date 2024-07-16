@@ -1,5 +1,4 @@
-# 
-
+#
 
 ## Descripcion
 
@@ -14,7 +13,7 @@ Obtener mapa de calor en base a un tiempo
         "deviceData": {...},
         "configKey": "getHeatmapImage",
         "value":{
-            "channelNumber": 1,
+            "channelNumber": "111-aaa",
             "start": "2019-01-01T00:00:00Z",
             "end": "2019-01-01T00:00:00Z"
         }
@@ -22,16 +21,14 @@ Obtener mapa de calor en base a un tiempo
 }
 ```
 
-| Campo | Tipo | Descripcion |
-| --- | --- | --- |
-| channelNumber | int | Numero de canal de video |
-| start | string | Fecha de inicio |
-| end | string | Fecha de fin |
-
-
-
+| Campo         | Tipo   | Descripcion           |
+| ------------- | ------ | --------------------- |
+| channelNumber | string | Id del canal de video |
+| start         | string | Fecha de inicio       |
+| end           | string | Fecha de fin          |
 
 ## Response Message
+
 ```json
 {
     ...,
@@ -41,6 +38,6 @@ Obtener mapa de calor en base a un tiempo
 }
 ```
 
-| Campo | Tipo | Descripcion |
-| --- | --- | --- |
+| Campo    | Tipo   | Descripcion                                 |
+| -------- | ------ | ------------------------------------------- |
 | filename | string | Nombre del archivo de la imagen del heatmap |
