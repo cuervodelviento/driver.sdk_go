@@ -13,7 +13,7 @@ Devuelve la url RTSP de una grabación incluyendo tiempo de inicio y tiempo fina
         "deviceData": {...},
         "configKey": "getRecordingSource",
         "value": {
-            "channelId" :"3-1",
+            "channelId" :"111-aaa",
             "utcStart" : "2024-07-12T14:40:10Z",
             "utcEnd" :"2024-07-12T16:30:25Z",
         }
@@ -52,7 +52,7 @@ utcEnd sigue el mismo formato pero es opcional
 
 | Campo      | Tipo   | Descripcion              |
 | ---------- | ------ | ------------------------ |
-| rtspSource | number | La fuente rtsp del canal |
+| rtspSource | string | La fuente rtsp del canal |
 
 Nota sobre la fuente RTSP
 

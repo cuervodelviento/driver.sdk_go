@@ -13,7 +13,7 @@ Devolver una lista de pares de fechas en los cuales el canal tiene video grabado
         "deviceData": {...},
         "configKey": "getRecordingRanges",
         "value": {
-            "channelId": "1-3",
+            "channelId": "111-aaa",
             "utcStart":  "2024-07-12T14:40:10Z",
             "utcEnd":    "2024-07-12T16:30:25Z",
         }
@@ -21,11 +21,11 @@ Devolver una lista de pares de fechas en los cuales el canal tiene video grabado
 }
 ```
 
-| Campo     | Tipo   | Descripción                                                   |
-| --------- | ------ | ------------------------------------------------------------- |
-| channelId | string | id del canal de video                                         |
-| utStart   | string | debe seguir el formato UTC "YYYY-MM-DDTHH:mm:ssZ" ES opcional |
-| utcEnd    | string | debe seguir el formato UTC "YYYY-MM-DDTHH:mm:ssZ" es opcional |
+| Campo     | Tipo   | Descripción                                                                                                                                                   |
+| --------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| channelId | string | id del canal de video                                                                                                                                         |
+| utStart   | string | debe seguir el formato [UTC](https://agileappscloud.info/aawiki/UTC_Format#:~:text=A%20date/time%20looks%20like%20this%3A) "YYYY-MM-DDTHH:mm:ssZ" es opcional |
+| utcEnd    | string | debe seguir el formato [UTC](https://agileappscloud.info/aawiki/UTC_Format#:~:text=A%20date/time%20looks%20like%20this%3A) "YYYY-MM-DDTHH:mm:ssZ" es opcional |
 
 Nota sobre el formato UTC
 YYYY son el año en 4 dígitos

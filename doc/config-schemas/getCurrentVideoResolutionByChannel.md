@@ -1,6 +1,5 @@
 # Get Current Video Resolution By Channel
 
-
 ## Descripcion
 
 Obtener la resolucion actual del video por canal
@@ -14,19 +13,18 @@ Obtener la resolucion actual del video por canal
         "deviceData": {...},
         "configKey": "getCurrentVideoResolutionByChannel",
         "value":{
-            "channelNumber": 1
-        } 
+            "channelId": "111-aaa"
+        }
     }
 }
 ```
 
-| Campo | Tipo | Descripcion |
-| --- | --- | --- |
-| channelNumber | int | Numero de canal de video |
-
-
+| Campo     | Tipo   | Descripcion           |
+| --------- | ------ | --------------------- |
+| channelId | string | Id del canal de video |
 
 ## Response Message
+
 ```json
 {
     ...,
@@ -36,6 +34,6 @@ Obtener la resolucion actual del video por canal
 }
 ```
 
-| Campo | Tipo | Descripcion |
-| --- | --- | --- |
+| Campo      | Tipo   | Descripcion          |
+| ---------- | ------ | -------------------- |
 | resolution | string | Resolucion del canal |
