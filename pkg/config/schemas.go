@@ -1,16 +1,13 @@
 package config
 
-// https://github.com/Netsocs-Team/DevDocs/blob/main/markdown/drivers/config-schemas/getChannels.md
 type GetChannelResponseItem struct {
-	ChannelNumber int    `json:"channelNumber"`
-	ChannelName   string `json:"name"`
-	Source        string `json:"rtspSource"`
+	ChannelId   string `json:"channelId"`
+	ChannelName string `json:"name"`
+	Source      string `json:"rtspSource"`
 }
 
-// https://github.com/Netsocs-Team/DevDocs/blob/main/markdown/drivers/config-schemas/getChannels.md
 type GetChannelResponse []*GetChannelResponseItem
 
-// https://github.com/Netsocs-Team/DevDocs/blob/main/markdown/drivers/config-schemas/setUsers.md
 type SetUserRequest struct {
 	ID           string `json:"id"`
 	Username     string `json:"username"`
@@ -96,14 +93,27 @@ type GetAdminUserResponseItem struct {
 }
 
 type GetRecordingSourceRequest struct {
-	ChannelNumber int     `json:"channelNumber"`
-	UTCStart      string  `json:"utcStart"`
-	UTCEnd        *string `json:"utcEnd"`
+	ChannelId string  `json:"channelId"`
+	UTCStart  string  `json:"utcStart"`
+	UTCEnd    *string `json:"utcEnd"`
 }
 
 type GetRecordingSourceResponse struct {
-	Source string `json:"source"`
+	Source string `json:"rtspSource"`
 }
+
+type GetRecordingRangesRequest struct {
+	ChannelId string  `json:"channelId"`
+	UTCStart  *string `json:"utcStart"`
+	UTCEnd    *string `json:"utcEnd"`
+}
+
+type RecordingRangeItem struct {
+	UTCStart string `json:"utcStart"`
+	UTCEnd   string `json:"utcEnd"`
+}
+
+type GetRecordingRangesResponse []*RecordingRangeItem
 
 type ZoomDirection int
 
@@ -113,7 +123,7 @@ const (
 )
 
 type ActionZoomRequest struct {
-	ChannelNumber int           `json:"channelNumber"`
+	ChannelId     string        `json:"channelId"`
 	ZoomDirection ZoomDirection `json:"zoomDirection"` // 0: zoom in, 1: zoom out
 }
 
@@ -129,8 +139,8 @@ const (
 )
 
 type ActionMoveRequest struct {
-	ChannelNumber int                        `json:"channelNumber"`
-	Direction     ActionMoveRequestDirection `json:"direction"`
+	ChannelId string                     `json:"channelId"`
+	Direction ActionMoveRequestDirection `json:"direction"`
 }
 
 type ActionMoveResponse error
@@ -170,13 +180,13 @@ type GetStorageResponseItem struct {
 }
 
 type GetCurrentVideoResolutionByChannelRequest struct {
-	ChannelNumber int `json:"channelNumber"`
+	ChannelId string `json:"channelId"`
 }
 type GetCurrentVideoResolutionByChannelResponse struct {
 	Resolution string `json:"resolution"`
 }
 type GetAvailableVideoResolutionsRequest struct {
-	ChannelNumber int `json:"channelNumber"`
+	ChannelId string `json:"channelId"`
 }
 
 type GetAvailableVideoResolutionsResponse struct {
@@ -184,21 +194,21 @@ type GetAvailableVideoResolutionsResponse struct {
 }
 
 type SetVideoResolutionRequest struct {
-	ChannelNumber int    `json:"channelNumber"`
-	Resolution    string `json:"resolution"`
+	ChannelId  string `json:"channelId"`
+	Resolution string `json:"resolution"`
 }
 
 type SetVideoResolutionResponse error
 
 type SetVideoInBlackAndWhiteRequest struct {
-	ChannelNumber int  `json:"channelNumber"`
-	Enabled       bool `json:"enabled"`
+	ChannelId string `json:"channelId"`
+	Enabled   bool   `json:"enabled"`
 }
 
 type SetVideoInBlackAndWhiteResponse error
 
 type GetVideoInBlackAndWhiteStatusRequest struct {
-	ChannelNumber int `json:"channelNumber"`
+	ChannelId string `json:"channelId"`
 }
 
 type GetVideoInBlackAndWhiteStatusResponse struct {
@@ -206,14 +216,14 @@ type GetVideoInBlackAndWhiteStatusResponse struct {
 }
 
 type SetMirrorVideoRequest struct {
-	ChannelNumber int  `json:"channelNumber"`
-	Enabled       bool `json:"enabled"`
+	ChannelId string `json:"channelId"`
+	Enabled   bool   `json:"enabled"`
 }
 
 type SetMirrorVideoResponse error
 
 type GetMirrorVideoStatusRequest struct {
-	ChannelNumber int `json:"channelNumber"`
+	ChannelId string `json:"channelId"`
 }
 
 type GetMirrorVideoStatusResponse struct {
@@ -221,14 +231,14 @@ type GetMirrorVideoStatusResponse struct {
 }
 
 type SetFlipVideoRequest struct {
-	ChannelNumber int  `json:"channelNumber"`
-	Enabled       bool `json:"enabled"`
+	ChannelId string `json:"channelId"`
+	Enabled   bool   `json:"enabled"`
 }
 
 type SetFlipVideoResponse error
 
 type GetFlipVideoStatusRequest struct {
-	ChannelNumber int `json:"channelNumber"`
+	ChannelId string `json:"channelId"`
 }
 
 type GetFlipVideoStatusResponse struct {
@@ -243,7 +253,7 @@ type ActionPlayAudioClipRequest struct {
 type ActionPlayAudioClipResponse error
 
 type GetHeatmapImageRequest struct {
-	ChannelNumber int `json:"channelNumber"`
+	ChannelId string `json:"channelId"`
 	// Start in format ISO 8601
 	Start string `json:"start"`
 	// End in format ISO 8601
