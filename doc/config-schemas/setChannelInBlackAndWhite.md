@@ -1,5 +1,6 @@
 # Set Channel In Black And White
 
+
 ## Descripcion
 
 Poner un canal de video en blanco y negro
@@ -13,18 +14,15 @@ Poner un canal de video en blanco y negro
         "deviceData": {...},
         "configKey": "setChannelInBlackAndWhite",
         "value":{
-            "channelId": "111-aaa",
-        }
+            "channelId": "string",
+        } // no needed
     }
 }
 ```
 
-| Campo     | Tipo   | Descripcion  |
-| --------- | ------ | ------------ |
-| channelId | string | Id del canal |
+
 
 ## Response Message
-
 ```json
 {
     ...,
@@ -35,7 +33,7 @@ Poner un canal de video en blanco y negro
 }
 ```
 
-| Campo | Tipo    | Descripcion                    |
-| ----- | ------- | ------------------------------ |
-| error | boolean | Error                          |
-| msg   | string  | Mensaje de error o log interno |
+| Campo | Tipo | Descripcion |
+| --- | --- | --- |
+| error | boolean | Error |
+| msg | string | Mensaje de error o log interno|

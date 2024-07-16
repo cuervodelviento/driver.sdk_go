@@ -1,5 +1,6 @@
 # Get Flip Video Status
 
+
 ## Descripcion
 
 Obtener informacion sobre si el video esta volteado (verticalmente) o no
@@ -13,18 +14,19 @@ Obtener informacion sobre si el video esta volteado (verticalmente) o no
         "deviceData": {...},
         "configKey": "getFlipVideoStatus",
         "value":{
-            "channelId": "111-aaa"
-        }
+            "channelNumber": 1
+        } 
     }
 }
 ```
 
-| Campo     | Tipo   | Descripcion           |
-| --------- | ------ | --------------------- |
-| channelId | string | Id del canal de video |
+| Campo | Tipo | Descripcion |
+| --- | --- | --- |
+| channelNumber | int | Numero de canal de video |
+
+
 
 ## Response Message
-
 ```json
 {
     ...,
@@ -34,6 +36,6 @@ Obtener informacion sobre si el video esta volteado (verticalmente) o no
 }
 ```
 
-| Campo   | Tipo    | Descripcion                 |
-| ------- | ------- | --------------------------- |
+| Campo | Tipo | Descripcion |
+| --- | --- | --- |
 | enabled | boolean | Estado del efecto de espejo |

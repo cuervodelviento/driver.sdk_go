@@ -13,18 +13,19 @@ Obtener informacion sobre si el video en blanco y negro esta habilitado
         "deviceData": {...},
         "configKey": "getVideoInBlackAndWhiteStatus",
         "value": {
-            "channelId": "111-aaa"
+            "channelNumber": 1
         }
     }
 }
 ```
 
-| Campo     | Tipo   | Descripcion  |
-| --------- | ------ | ------------ |
-| channelId | string | Id del canal |
+| Campo | Tipo | Descripcion |
+| --- | --- | --- |
+| channelNumber | number | Numero del canal |
+
+
 
 ## Response Message
-
 ```json
 {
     ...,
@@ -36,6 +37,6 @@ Obtener informacion sobre si el video en blanco y negro esta habilitado
 
 Solo el nombre de usuario para no revelear el password del admin
 
-| Campo   | Tipo    | Descripcion                                             |
-| ------- | ------- | ------------------------------------------------------- |
+| Campo | Tipo | Descripcion |
+| --- | --- | --- |
 | enabled | boolean | Si el video en blanco y negro esta habilitado sera true |
