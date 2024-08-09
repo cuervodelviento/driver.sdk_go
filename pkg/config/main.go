@@ -59,7 +59,7 @@ type defaultDataResponse struct {
 	Msg   string `json:"msg"`
 }
 
-func ListenConfig(host string, driverKey string) {
+func ListenConfig(host string, driverKey string) error {
 
 	go func() {
 		for {
@@ -168,12 +168,12 @@ func ListenConfig(host string, driverKey string) {
 				err = c.WriteMessage(websocket.TextMessage, jsondata)
 				if err != nil {
 					log.Println("write:", err)
-					return
+					return err
 				}
 			}
 
 		case <-done:
-			return
+			return nil
 		case <-interrupt:
 			log.Println("interrupt")
 
@@ -182,12 +182,12 @@ func ListenConfig(host string, driverKey string) {
 			err := c.WriteMessage(websocket.CloseMessage, websocket.FormatCloseMessage(websocket.CloseNormalClosure, ""))
 			if err != nil {
 				log.Println("write close:", err)
-				return
+				return err
 			}
 			select {
 			case <-done:
 			}
-			return
+			return nil
 		}
 	}
 
