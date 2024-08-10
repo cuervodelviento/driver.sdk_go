@@ -44,6 +44,7 @@ type ConfigMessageDeviceData struct {
 	IsSSL    bool   `json:"is_ssl"`
 	SSLPort  int    `json:"ssl_port"`
 	ID       int    `json:"id_device"`
+	ChildID  int    `json:"child_id"`
 }
 
 var messages = make(chan *ConfigMessage)
