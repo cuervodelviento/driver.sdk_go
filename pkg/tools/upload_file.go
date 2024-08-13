@@ -20,11 +20,10 @@ func UploadFileAndGetURL(driverHubHost string, driverKey string, file *os.File) 
 	// Do something
 
 	body := &bytes.Buffer{}
-	host := driverHubHost
-	if !strings.HasPrefix(host, "http://") {
-		host = fmt.Sprintf("http://%s", host)
+	if !strings.HasPrefix(driverHubHost, "http://") {
+		driverHubHost = fmt.Sprintf("http://%s", driverHubHost)
 	}
-	url := fmt.Sprintf("%s/api/v1/upload", host)
+	url := fmt.Sprintf("%s/api/v1/upload", driverHubHost)
 
 	// Create a form file
 	writer := multipart.NewWriter(body)
