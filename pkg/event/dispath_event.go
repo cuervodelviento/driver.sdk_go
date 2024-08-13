@@ -18,6 +18,7 @@ type Dispatcher struct {
 	channelNumber *int
 	personId      *string
 	videoURL      *string
+	timestamp     int64
 }
 
 func NewDispatcher(driverHubHost string, driverKey string, deviceId int) *Dispatcher {
@@ -32,6 +33,10 @@ func NewDispatcher(driverHubHost string, driverKey string, deviceId int) *Dispat
 
 func (e *Dispatcher) SetImageURL(imageURL string) {
 	e.imageURL = &imageURL
+}
+
+func (e *Dispatcher) SetTimestamp(timestamp int64) {
+	e.timestamp = timestamp
 }
 
 func (e *Dispatcher) SetOriginalValue(originalValue string) {
@@ -74,6 +79,11 @@ func (e *Dispatcher) DispatchAndResetFields(eventKey string) error {
 	if e.videoURL != nil {
 		buff += "\"eventVideoUrl\": \"" + *e.videoURL + "\","
 	}
+
+	if e.timestamp != 0 {
+		buff += fmt.Sprintf("\"timestamp\": %d,", e.timestamp)
+	}
+
 	buff = buff[:len(buff)-1] + "}"
 	body := []byte(buff)
 	_, err := http.Post(fmt.Sprintf("http://%s:%d/v1/topologia/misc/%s", e.Host, e.Port, eventKey), "application/json", bytes.NewReader(body))
