@@ -9,6 +9,7 @@ import (
 	"net/http"
 	"os"
 	"path/filepath"
+	"strings"
 )
 
 type uploadFileResponse struct {
@@ -19,7 +20,11 @@ func UploadFileAndGetURL(driverHubHost string, driverKey string, file *os.File) 
 	// Do something
 
 	body := &bytes.Buffer{}
-	url := fmt.Sprintf("%s/api/v1/upload", driverHubHost)
+	host := driverHubHost
+	if !strings.HasPrefix(host, "http://") {
+		host = fmt.Sprintf("http://%s", host)
+	}
+	url := fmt.Sprintf("%s/api/v1/upload", host)
 
 	// Create a form file
 	writer := multipart.NewWriter(body)
