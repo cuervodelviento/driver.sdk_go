@@ -1,22 +1,30 @@
-# This workflow will triage pull requests and apply a label based on the
-# paths that are modified in the pull request.
-#
-# To use this workflow, you will need to set up a .github/labeler.yml
-# file with configuration.  For more information, see:
-# https://github.com/actions/labeler
+name: Create Tag on Merge
 
-name: Labeler
-on: [pull_request_target]
+on:
+  pull_request:
+    types: [closed]
+  push:
+    branches:
+      - master
 
 jobs:
-  label:
-
+  create-tag:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pull-requests: write
-
     steps:
-    - uses: actions/labeler@v4
-      with:
-        repo-token: "${{ secrets.GITHUB_TOKEN }}"
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Generate tag
+        run: |
+          # Check if the commit message contains #major or #patch
+          if [[ $(git log -1 --pretty=%B) =~ "#major|#patch" ]]; then
+            # Get the latest tag
+            latest_tag=$(git describe --tags --abbrev=0)
+            # Increment the tag version
+            new_tag=$(echo "$latest_tag" | awk -F. '{$NF = $NF + 1;} 1' | sed 's/ /./g')
+            # Create and push the new tag
+            git tag "$new_tag"
+            git push origin "$new_tag"
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
