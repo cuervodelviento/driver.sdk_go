@@ -173,3 +173,5 @@ Los marcados con * son obligatorios.
 | SET_ACTION_UNLOCK_DEVICE | SetActionUnlockDeviceRequest | SetActionUnlockDeviceResponse | Unlock the device | [Open](./doc/config-schemas/setActionUnlockDevice.md) |
 | GET_UNLOCK_DEVICE_STATUS | GetUnlockDeviceStatusRequest | GetUnlockDeviceStatusResponse | Get the unlock device status | [Open](./doc/config-schemas/getUnlockDeviceStatus.md) |
 | GET_SUBDEVICES | GetSubdevicesRequest | GetSubdevicesResponse | Get the subdevices of the device | [Open](./doc/config-schemas/getSubdevices.md) |
+
+.
