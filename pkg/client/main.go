@@ -24,7 +24,7 @@ func NewNetsocsDriverClient(driverKey string, driverHubHost string, isSSL bool) 
 	}
 }
 
-func (d *NetsocsDriverClient) GetChildrens(parentId int) ([]Device, error) {
+func (d *NetsocsDriverClient) GetChildren(parentId int) ([]Device, error) {
 	url := d.buildURL(fmt.Sprintf("get_childs/%d", parentId))
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
