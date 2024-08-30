@@ -42,7 +42,7 @@ func (d *NetsocsDriverClient) GetChildren(parentId int) ([]Device, error) {
 	}
 
 	for i := range devices {
-		if devices[i].Params == nil && devices[i].Params["child_id"] != nil {
+		if devices[i].Params != nil && devices[i].Params["child_id"] != nil {
 			childrenId := devices[i].Params["child_id"].(string)
 			devices[i].ChildID = childrenId
 		}
