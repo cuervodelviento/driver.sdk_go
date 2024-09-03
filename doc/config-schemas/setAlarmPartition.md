@@ -1,4 +1,4 @@
-# Get storages config
+# Set Alarm Partition
 
 ## Descripcion
 
