@@ -17,11 +17,22 @@ type NetsocsDriverClient struct {
 }
 
 func NewNetsocsDriverClient(driverKey string, driverHubHost string, isSSL bool) *NetsocsDriverClient {
-	return &NetsocsDriverClient{
+	client := &NetsocsDriverClient{
 		driverKey:     driverKey,
 		driverHubHost: driverHubHost,
 		isSSL:         isSSL,
 	}
+
+	// If the events.json file exists, add the handler for the actionListenEvents
+	// for create a default behavior for the actionListenEvents
+	events, err := loadsEventsFromFile()
+	if err == nil {
+		client.AddConfigHandler(config.GET_EVENTS_AVAILABLE, func(valueMessage config.HandlerValue) (interface{}, error) {
+			return events, nil
+		})
+	}
+
+	return client
 }
 
 func (d *NetsocsDriverClient) GetChildren(parentId int) ([]Device, error) {
