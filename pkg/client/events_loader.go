@@ -13,7 +13,7 @@ import (
 func loadsEventsFromFile(filename ...string) (config.GetEventsAvailableResponse, error) {
 	events := config.GetEventsAvailableResponse{}
 	jsonfilename := "events.json"
-	if len(filename) == 0 {
+	if len(filename) > 0 {
 		jsonfilename = filename[0]
 	}
 	data, err := os.ReadFile(jsonfilename)
