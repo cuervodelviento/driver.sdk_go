@@ -544,3 +544,18 @@ type GetEventsAvailableResponseItem struct {
 }
 
 type GetEventsAvailableResponse []GetEventsAvailableResponseItem
+
+type GetPeopleCountingRequest struct {
+	ChannelNumber string `json:"channelNumber"`
+	UTCStart      string `json:"utcStart"`
+	UTCEnd        string `json:"utcEnd"`
+}
+
+type GetPeopleCountingResponseItem struct {
+	LineID   string `json:"lineId"`
+	Name     string `json:"name"`
+	InCount  int    `json:"inCount"`
+	OutCount int    `json:"outCount"`
+}
+
+type GetPeopleCountingResponse []GetPeopleCountingResponseItem
