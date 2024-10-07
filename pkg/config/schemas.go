@@ -525,3 +525,37 @@ type GetSubdevicesResponseItem struct {
 }
 
 type GetSubdevicesResponse []GetSubdevicesResponseItem
+
+type GetEventsAvailableRequest struct{}
+type EventSchemaTranslationStrings struct {
+	Name        string `json:"name"`
+	Description string `json:"description"`
+}
+
+type GetEventsAvailableResponseItem struct {
+	// Key is unique identifier for the event
+	// its value is created by the concatenation of the device name and the event name
+	// Example: "driver.tyco_entrapass:identificationSuccess"
+	Key string `json:"key"`
+	// Name and description are the human readable values for the event
+	TranslationStrings map[string]EventSchemaTranslationStrings `json:"translation_strings"`
+	// Value between 1 - 3. 1 -> low, 2 -> medium, 3 -> high
+	Priority int `json:"priority"`
+}
+
+type GetEventsAvailableResponse []GetEventsAvailableResponseItem
+
+type GetPeopleCountingRequest struct {
+	ChannelNumber string `json:"channelNumber"`
+	UTCStart      string `json:"utcStart"`
+	UTCEnd        string `json:"utcEnd"`
+}
+
+type GetPeopleCountingResponseItem struct {
+	LineID   string `json:"lineId"`
+	Name     string `json:"name"`
+	InCount  int    `json:"inCount"`
+	OutCount int    `json:"outCount"`
+}
+
+type GetPeopleCountingResponse []GetPeopleCountingResponseItem
