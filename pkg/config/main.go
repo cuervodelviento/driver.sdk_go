@@ -126,8 +126,11 @@ func ListenConfig(host string, driverKey string) error {
 
 	interrupt := make(chan os.Signal, 1)
 	signal.Notify(interrupt, os.Interrupt)
-
-	u := url.URL{Scheme: "ws", Host: host, Path: "/ws/v1/config_communication"}
+	u, err := url.Parse(fmt.Sprintf("ws://%s/ws/v1/config_communication", host))
+	if err != nil {
+		return err
+	}
+	// u := url.URL{Scheme: "ws", Host: host, Path: "/ws/v1/config_communication"}
 	log.Printf("connecting to %s", u.String())
 
 	c, _, err := websocket.DefaultDialer.Dial(u.String(), http.Header{
